@@ -1,6 +1,7 @@
 # Liz Colavita
 
-![My Image](../../Desktop/IMG_6164.jpeg "Data Selfie")
+![IMG_6164](https://user-images.githubusercontent.com/89871328/192918119-d0a168c1-c347-4732-9697-e60e47909833.jpeg "Data Selfie")
+
 
 My name is Liz Colavita, and I am a second-year CAPP student. I chose Harris/CAPP following an internship experience with the UN in which I saw first-hand the lack of understanding between data scientists and policy makers. 
 Organizations, particularly governments, NGOs, and multilateral organizations, are increasingly commissioning research and quantitative data collection with limited capabilities to effectively interpret that data and implement actionable insights. 
