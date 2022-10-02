@@ -7,3 +7,7 @@ This project will tell a story, through data visualizations, about a particular 
 Potential topics include something within my expertise of economic development, international relations, and/or gender equality.
 
 This project will largely utilize html, css, and javascript - in particular d3.js.
+
+## Contents
+
+week_01 - introduction/get to know me
