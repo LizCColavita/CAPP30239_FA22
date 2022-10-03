@@ -8,6 +8,6 @@ Potential topics include something within my expertise of economic development, 
 
 This project will largely utilize html, css, and javascript - in particular d3.js.
 
-## Contents
+## Content
 
-week_01 - introduction/get to know me
+week_01 - Introduction/get to know me
