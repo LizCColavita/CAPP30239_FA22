@@ -15,7 +15,11 @@ In creating my own Dear Data postcard, I recorded the number of times and the co
 
 It could be as subtle as swaying and moving my shoulders while sitting at my desk working, or it could be dancing down a sidewalk in River North on when I heard a banger on the way to my birthday dinner. Sometimes I danced in the morning getting ready or making breakfast; sometimes I was waiting for the L or the Metra doing a little dance on the platform. These little moments of movement always bring me joy, and it was especially fun to more intentionally notice and appreciate them.
 
-From observing when I danced, I learned that I like to dance most mornings. And further reflecting on this habit has helped me realize that I do some of my best work and thinking in the mornings. AS evidenced by my reflections through this assignment, sitting with more contextualized, complex data can lead to more insights. 
+![IMG_6351](https://user-images.githubusercontent.com/89871328/194981145-95d39034-0861-489b-8a14-09f1574dfb33.jpeg)
+
+![IMG_6352](https://user-images.githubusercontent.com/89871328/194981186-778fb6c0-d2aa-4f91-bd9c-22d1b3fdb49b.jpeg)
+
+From observing when I danced, I learned that I like to dance most mornings. And further reflecting on this habit has helped me realize that I do some of my best work and thinking in the mornings. As evidenced by my reflections through this assignment, sitting with more contextualized, complex data can lead to more insights. 
 
 I am also more comfortable dancing in the confines and comfort of my own apartment, but if the mood is right, I will dance in public. I'm break dancing on the train platform or waltzing through downtown, but I will move my body while listening to music in these more mundane moments.
 
