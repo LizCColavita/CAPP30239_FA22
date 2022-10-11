@@ -14,8 +14,5 @@ This project will largely utilize html, css, and javascript - in particular d3.j
 - Introduction/get to know me
 
 ### Week 2 
-<<<<<<< HEAD
 - Dear Data Project
-=======
-- Dear Data Project
->>>>>>> 4eeddc9f8c719654e757b0db366949841446d4bf
+
