@@ -1,10 +1,13 @@
 # Project Step 1: Find Data
 
-## Data Source:
+## Data Source
 
-#### FiveThirtyEight
+### FiveThirtyEight
+
 Data title: Sports Political Donations
+
 Data link: https://github.com/fivethirtyeight/data/tree/master/sports-political-donations
+
 Article link: https://fivethirtyeight.com/features/inside-the-political-donation-history-of-wealthy-sports-owners/
 
 
