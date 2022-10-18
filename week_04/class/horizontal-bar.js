@@ -44,7 +44,7 @@ d3.csv("covid.csv").then(data => {
         .attr("x", margin.left)
         .attr("width", d => x(d.cases))
         .attr("y", d => y(d.country))
-        .attr("height", y.bandwidth());
+        .attr("height", y.bandwidth()); //can only use bandwidth with scaleBand 
     
     bar.append('text') // add labels
         .text(d => d.cases)
