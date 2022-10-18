@@ -1,4 +1,4 @@
-/* Horizontal bar chart for COVID country cases */
+/* Horizontal bar chart for COVID country cases (ranking) */
 
 d3.csv("covid.csv").then(data => {
 
