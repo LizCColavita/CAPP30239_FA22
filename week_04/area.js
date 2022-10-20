@@ -12,8 +12,8 @@ d3.csv('long-term-interest-monthly.csv').then(data => {
     let timeParse = d3.timeParse("%Y-%m");
     
     for (let d of data) {
-        d.Value = +d.Value;
-        d.Date = timeParse(d.Date);
+      d.Date = timeParse(d.Date);
+      d.Value = +d.Value;
     }
 
     let x = d3.scaleTime()
@@ -50,4 +50,12 @@ d3.csv('long-term-interest-monthly.csv').then(data => {
       .attr("transform", "rotate(-90)")
       .text("Interest rate");
     
+    let area = d3.area()
+      .x(d => x(d.Data))
+      .y0(y(0))
+      .y1(d => y(d.Value));
+    
+    svg.append("path")
+      .datum(data)
+      .attr("d", area);
   });

@@ -1,40 +1,66 @@
 /* D3 Line Chart */
 
-const height = 500,
+const height = 500, //not deoendent on the data
     width = 800,
     margin = ({ top: 15, right: 30, bottom: 35, left: 40 });
     
-const svg = d3.select("#chart")
+const svg = d3.select("#chart") //not dependent on the data
     .append("svg")
     .attr("viewBox", [0, 0, width, height]);
 
 d3.csv('long-term-interest-monthly.csv').then(data => {
     
-    //TYPE HERE
+    let timeParse = d3.timeParse("%Y-%m"); //format of data as it exists before
     
-    // svg.append("g")
-    //   .attr("transform", `translate(0,${height - margin.bottom})`)
-    //   .call(d3.axisBottom(x));
-    
-    // svg.append("g")
-    //   .attr("transform", `translate(${margin.left},0)`)
-    //   .call(d3.axisLeft(y));
+    for (let d of data) {              
+        d.Date = timeParse(d.Date);
+        d.Value = +d.Value;
+    }
 
-    // svg.append("text")
-    //   .attr("class", "x-label")
-    //   .attr("text-anchor", "end")
-    //   .attr("x", width - margin.right)
-    //   .attr("y", height)
-    //   .attr("dx", "0.5em")
-    //   .attr("dy", "-0.5em") 
-    //   .text("Year");
+    console.log(data);
+
+    let x = d3.scaleTime()
+        .domain(d3.extent(data, d => d.Date))
+        .range([margin.left, width - margin.right]);
     
-    // svg.append("text")
-    //   .attr("class", "y-label")
-    //   .attr("text-anchor", "end")
-    //   .attr("x", -margin.top/2)
-    //   .attr("dx", "-0.5em")
-    //   .attr("y", 10)
-    //   .attr("transform", "rotate(-90)")
-    //   .text("Interest rate");
+    let y = d3.scaleLinear()
+        .domain ([0, d3.max(data, d => d.Value)])
+        .range([height - margin.bottom, margin.top])
+
+    svg.append("g")
+      .attr("transform", `translate(0,${height - margin.bottom})`)
+      .call(d3.axisBottom(x));
+    
+    svg.append("g")
+      .attr("transform", `translate(${margin.left},0)`)
+      .call(d3.axisLeft(y).tickSizeOuter(0).tickFormat(d => d + "%"));
+
+    svg.append("text")
+      .attr("class", "x-label")
+      .attr("text-anchor", "end")
+      .attr("x", width - margin.right)
+      .attr("y", height)
+      .attr("dx", "0.5em")
+      .attr("dy", "-0.5em") 
+      .text("Year");
+    
+    svg.append("text")
+      .attr("class", "y-label")
+      .attr("text-anchor", "end")
+      .attr("x", -margin.top/2)
+      .attr("dx", "-0.5em")
+      .attr("y", 10)
+      .attr("transform", "rotate(-90)")
+      .text("Interest rate");
+
+    let line = d3.line()
+        .x(d => x(d.Date))
+        .y(d => y(d.Value));
+
+    svg.append("path")
+        .datum(data)        //singular because there is only 1 path/1 line
+        .attr("d", line)
+        .attr("fill", "none")
+        .attr("stroke", "steelblue");
+
   });
