@@ -28,14 +28,14 @@ d3.csv('long-term-interest-canada.csv').then(data => {
         .range([margin.left + 5, width - margin.right]);
     
     let y = d3.scaleLinear()
-        .domain ([0, d3.max(data, d => d.Num) + 0.2])
+        .domain ([0, d3.max(data, d => d.Num) + 0.2]) //adjust top of y scale to be 20% higher than max d.Num 
         .range([height - margin.bottom, margin.top]);
     
     
     /* append axes to svg */
     svg.append("g")
       .attr("transform", `translate(0,${height - margin.bottom})`)
-      .call(d3.axisBottom(x).tickFormat(d3.timeFormat("%b"))); //format month to be abbreviated
+      .call(d3.axisBottom(x).tickFormat(d3.timeFormat("%b")));  //format month to be abbreviated
     
     svg.append("g")
       .attr("transform", `translate(${margin.left},0)`)
@@ -54,7 +54,7 @@ d3.csv('long-term-interest-canada.csv').then(data => {
     svg.append("text")
       .attr("class", "y-label")
       .attr("text-anchor", "end")
-      .attr("x", -margin.top*2)
+      .attr("x", -margin.top*2) //position label further down the y axis
       .attr("dx", "-0.5em")
       .attr("y", 10)
       .attr("transform", "rotate(-90)")
