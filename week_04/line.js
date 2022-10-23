@@ -1,6 +1,6 @@
 /* D3 Line Chart */
 
-const height = 500, //not deoendent on the data
+const height = 500, //not dependent on the data
     width = 800,
     margin = ({ top: 15, right: 30, bottom: 35, left: 40 });
     
