@@ -28,7 +28,7 @@ d3.csv('long-term-interest-canada.csv').then(data => {
         .range([margin.left + 5, width - margin.right]);
     
     let y = d3.scaleLinear()
-        .domain ([0, d3.max(data, d => d.Num)])
+        .domain ([0, d3.max(data, d => d.Num) + 0.2])
         .range([height - margin.bottom, margin.top]);
     
     
@@ -49,13 +49,12 @@ d3.csv('long-term-interest-canada.csv').then(data => {
       .attr("x", width - margin.right)
       .attr("y", height)
       .attr("dx", "0.5em")
-      .attr("dy", "-0.5em") 
-      .text("Month");
+      .attr("dy", "-0.5em");
     
     svg.append("text")
       .attr("class", "y-label")
       .attr("text-anchor", "end")
-      .attr("x", -margin.top/2)
+      .attr("x", -margin.top*2)
       .attr("dx", "-0.5em")
       .attr("y", 10)
       .attr("transform", "rotate(-90)")
@@ -71,6 +70,6 @@ d3.csv('long-term-interest-canada.csv').then(data => {
       .datum(data)        //singular because there is only 1 path/1 line
       .attr("d", line)
       .attr("fill", "none")
-      .attr("stroke", "steelblue");
+      .attr("stroke", "green");
 
 });
