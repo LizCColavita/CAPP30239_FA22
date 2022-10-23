@@ -35,7 +35,7 @@ d3.csv('long-term-interest-canada.csv').then(data => {
     /* append axes to svg */
     svg.append("g")
       .attr("transform", `translate(0,${height - margin.bottom})`)
-      .call(d3.axisBottom(x).tickFormat(d3.timeFormat("%b")));
+      .call(d3.axisBottom(x).tickFormat(d3.timeFormat("%b"))); //format month to be abbreviated
     
     svg.append("g")
       .attr("transform", `translate(${margin.left},0)`)
@@ -70,6 +70,7 @@ d3.csv('long-term-interest-canada.csv').then(data => {
       .datum(data)        //singular because there is only 1 path/1 line
       .attr("d", line)
       .attr("fill", "none")
-      .attr("stroke", "green");
+      .attr("stroke", "navy")
+      .attr("stroke-width", 1.2);
 
 });
