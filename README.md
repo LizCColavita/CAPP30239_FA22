@@ -18,6 +18,10 @@ This project will largely utilize html, css, and javascript - in particular d3.j
 
 ### Week 3 - Data Art vs. Data Visualization
 - class: html, js, and data files from in-class d3 bar chart example (covid cases)
-- homework: html, js, and data files from in-class d3 bar chart assigned for homework (library visits)
+- homework: html, js, and data files from d3 bar chart assigned for homework (library visits)
 - project: final project milestone 1 to find data and outline project
+
+### Week 4 - Storytelling with Data
+- class: horizontal bar chart, (multi)line graph, area chart
+- homework: line chart exercise
 
