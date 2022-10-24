@@ -12,25 +12,25 @@ On Thursday in class, we learned how to build a line graph, area graph, and mult
 
 ### Contents
 
-**class**: learning how to create a horizontal bar chart, (multi)line graph, and area chart
+**class**: learning how to create a horizontal bar chart, (multi)line graph, and area chart <br>
     - Horizontal Bar Chart
         _horizontal-bar-chart.html_
         _horizontal-bar-chart.js_
-        _covid.csv_
-    - Line Graph
+        _covid.csv_<br>
+    - Line Graph  
         _line.html_
         _line.js_
-        _long-term-interest-monthly.csv_   
+        _long-term-interest-monthly.csv_ <br>   
     - Area Chart
         _area.html_
         _area.js_
-        _long-term-interest-monthly.csv_
+        _long-term-interest-monthly.csv_<br>
     - Multi-line Graph
         _multiline.html_
         _multiline.js_
-        _long-term-interest-G7.csv_
+        _long-term-interest-G7.csv_<br>
 
-**homework**: practicing line graph
+**homework**: practicing line graph<br>
     _homework.html_
     _homework.js_
     _long-term-interest-canada.csv_
