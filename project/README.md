@@ -59,7 +59,7 @@ This is my primary data source, and I currently do not have secondary datasource
 
 
 
-# Project Step 2 - Clean Data
+# Project Step 2: Clean Data
 
 Data files are now housed in the "data" folder within "project".
 
