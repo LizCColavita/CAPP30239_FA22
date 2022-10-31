@@ -56,3 +56,30 @@ I am excited to go deeper into the data and explore the relationships between th
 
 ## Primary and Secondary Data
 This is my primary data source, and I currently do not have secondary datasource as I think there is enough here to explore, tease out interesting relationships, and create engaging visualizations. Though I am very open to finding more data as the project progresses.
+
+
+
+# Project Step 2 - Clean Data
+
+Data files are now housed in the "data" folder within "project".
+
+## Clean data
+My data, sourced from FiveThirtyEight, was fairly clean when I downloaded it. However there were a few steps I went through to clean it, and the code for this is found in the Jupyter notebook Clean.ipynb. Namely, I cleaned the data in the following ways:
+
+- changed the  **format of the data in the "Amount" column from a character string to an integer** in order to do calculations, such as summing values in the column and making charts that involve numerical variables
+- changed **format of "Recipient" strings** to be more uniform (all upercase)
+- created a **binary indicator variable "Female"** to indicate whether an owner or commissioner is a woman (1) or not (0)
+- **separated records** for which an owner owned more than 1 team for analysis when I want to explore the data by league/team
+
+This resulted in the cleaned data file: sports-political-donations-clean.csv.
+
+
+## Separate into smaller files
+I **created smaller csv files** based on league. Requirements if the assignment specified that csv files should be less than 1000 rows/records. My dataset is fairly compact, so I'm not sure this was absolutely necessary. Nonetheless, just in case, I split the cleaned overall csv ("sports-political-donations-clean.csv") into smaller csv files based on league.
+
+- MLB.csv
+- NASCAR.csv
+- NBA.csv
+- NFL.csv
+- NHL.csv
+- WNBA.csv
