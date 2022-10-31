@@ -13,19 +13,23 @@ This project tells a story, through data visualizations, about sports owners' po
 ### Week 2 - Data Humanism
 - Dear Data Project
 
-### Week 3 - Data Art vs. Data Visualization
+### Week 3 - Data Art vs. Data Visualization & Intro to d3/Comparison
 - class: html, js, and data files from in-class d3 bar chart example (covid cases)
 - homework: html, js, and data files from d3 bar chart assigned for homework (library visits)
 - project: final project milestone 1 to find data and outline project
 
-### Week 4 - Storytelling with Data
+### Week 4 - Storytelling with Data & Change over Time
 - class: horizontal bar chart, (multi)line graph, area chart
 - homework: line chart exercise
 
-### Week 5 - 
+### Week 5 - Analyzing Data Visualizations & Distribution/Correlation/Joins/Animation
 - class: histograms, scatterplots, observable files from in-class d3 lecture
 - homework: N/A (no d3 homework exercise this week)
 - project: data folder with cleaned/split csv files
 
+### Week 6 - 
+- class:
+- homework:
+- project:
 
 ## Project
