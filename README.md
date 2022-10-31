@@ -1,12 +1,9 @@
-# CAPP30239_FA22 [Insert project title here]
+# CAPP30239_FA22 
 
-## Introduction/Project Description
-This repository contains the code and any accompanying files used to complete my project in Data Visualization for Policy Analysis (CAPP30239 Autumn 2022, University of Chicago).
+## Introduction
+This repository contains the code and any accompanying files used to complete my project in Data Visualization for Policy Analysis (CAPP30239 Autumn 2022, University of Chicago). It also contains the files for learning and practicing skills with d3.js.
 
-This project will tell a story, through data visualizations, about a particular policy topic (TBD). 
-Potential topics include something within my expertise of economic development, international relations, and/or gender equality.
-
-This project will largely utilize html, css, and javascript - in particular d3.js.
+This project tells a story, through data visualizations, about sports owners' political donations and will largely utilize html, css, and javascript - in particular d3.js.
 
 ## Content
 
@@ -25,3 +22,10 @@ This project will largely utilize html, css, and javascript - in particular d3.j
 - class: horizontal bar chart, (multi)line graph, area chart
 - homework: line chart exercise
 
+### Week 5 - 
+- class: histograms, scatterplots, observable files from in-class d3 lecture
+- homework: N/A (no d3 homework exercise this week)
+- project: data folder with cleaned/split csv files
+
+
+## Project
