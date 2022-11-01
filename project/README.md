@@ -71,7 +71,7 @@ My data, sourced from FiveThirtyEight, was fairly clean when I downloaded it. Ho
 - created a **binary indicator variable "Female"** to indicate whether an owner or commissioner is a woman (1) or not (0)
 - **separated records** for which an owner owned more than 1 team for analysis when I want to explore the data by league/team
 
-This resulted in the cleaned data file: sports-political-donations-clean.csv.
+This resulted in the cleaned data file: sports-political-donations-clean.csv. For some analysis purposes, I also created a csv file, sports-political-donations-unseparated,csv, which includes all the above changes with the exception of seperating the records for owners of multiples teams. This is for the purpose of analyzing donations when I do not want to separate them by league. Otherwise I would end up double counting donations for owners of more than one team.
 
 
 ## Separate into smaller files
