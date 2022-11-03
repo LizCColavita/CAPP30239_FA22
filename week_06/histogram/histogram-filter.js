@@ -32,7 +32,7 @@ d3.json('climate.json').then((data) => {
             .thresholds(10)
             .value(d => d.average)(data[m]);
 
-        binGroups.selectAll("g")
+        binGroups.selectAll("g") //join when a user selects something in the drop down
             .data(bins, d => d.x0)
         .join(
             enter => {
@@ -90,7 +90,7 @@ d3.json('climate.json').then((data) => {
 
         svg.selectAll("foreignObject").remove();
 
-        let temp = d3.mean(data[m], d => d.average).toFixed(1);
+        let temp = d3.mean(data[m], d => d.average).toFixed(1); //toFixed rounds to 1 decimal point
         let str = `The average temperature in 
                     <b style="text-transform:capitalize;">${m} 2020</b> was 
                     <b>${temp}℉</b>.`
@@ -107,9 +107,9 @@ d3.json('climate.json').then((data) => {
 
     updateChart("january");
 
-    d3.selectAll("select")
+    d3.selectAll("select") //detect when a user changes something in the dropdown
         .on("change", function (event) {
-            const m = event.target.value;
-            updateChart(m); 
+            const m = event.target.value; //event object - has the attributes target.value (see html file <select> tag)
+            updateChart(m); //call to updateChart function (expanded join) passing it value m
         });
 });
