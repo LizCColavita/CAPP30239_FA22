@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Stacked Bar</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
   <div class="container">
@@ -45,7 +45,7 @@
       //protein,carbs,fiber
       const subgroups = data.columns.slice(1);
 
-      const color = d3.scaleOrdinal(subgroups,['#e41a1c','#377eb8','#4daf4a']);
+      const color = d3.scaleOrdinal(subgroups,['#e41a1c','#377eb8','#4daf4a']); //scaleOrdinal maps colors to the subgroups
     
       const stackedData = d3.stack()
         .keys(subgroups)(data)
@@ -56,20 +56,20 @@
         .join("g")
         .attr("fill", d => color(d.key))
         .selectAll("rect")
-        .data(d => d)
+        .data(d => d) //uses whatever row we're in stackedData for the data (uses a specific array)
         .join("rect")
         .attr("x", d => x(d.data.group))
         .attr("y", d => y(d[1]))
         .attr("height", d => y(d[0]) - y(d[1]))
         .attr("width",x.bandwidth())
 
-      // Manual legend
+      // Manual legend (plugin called d3.legend that can do this for you)
       svg.append("circle").attr("cx",10).attr("cy",10).attr("r", 6).style("fill", "#e41a1c")
       svg.append("circle").attr("cx",110).attr("cy",10).attr("r", 6).style("fill", "#377eb8")
       svg.append("circle").attr("cx",205).attr("cy",10).attr("r", 6).style("fill", "#4daf4a")
-      svg.append("text").attr("x", 20).attr("y", 10).text("protein").style("font-size", "15px").attr("alignment-baseline","middle")
-      svg.append("text").attr("x", 130).attr("y", 10).text("carbs").style("font-size", "15px").attr("alignment-baseline","middle")
-      svg.append("text").attr("x", 225).attr("y", 10).text("fiber").style("font-size", "15px").attr("alignment-baseline","middle")
+      svg.append("text").attr("x", 25).attr("y", 10).text("protein").style("font-size", "15px").attr("alignment-baseline","middle")
+      svg.append("text").attr("x", 125).attr("y", 10).text("carbs").style("font-size", "15px").attr("alignment-baseline","middle")
+      svg.append("text").attr("x", 220).attr("y", 10).text("fiber").style("font-size", "15px").attr("alignment-baseline","middle")
 
     });
     
@@ -77,3 +77,4 @@
   
 </body>
 </html>
+
