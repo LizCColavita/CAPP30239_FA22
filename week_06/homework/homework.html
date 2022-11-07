@@ -5,7 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Building Charts</title>
-    <link rel="stylesheet" href="../styles.css">  
+    <link rel="stylesheet" href="../styles.css"> 
+    <style>
+        #stacked-chart {
+            text-align: right;
+        }
+
+        #stacked-chart div {
+            color:white;
+            box-sizing:border-box;
+            border:solid 1px #fff;
+            padding: 10px;
+            display: inline-block;
+        }
+    </style>
 </head>
 <body>
     <div class= "container"></div>
@@ -20,8 +33,17 @@
     <p>The following line charts shows how the number of fatal police shootings changed over the course of 2015.
     </p>
     <div id = "line-chart"></div>
+
+    <div class="container"></div>
+    <h1>Horizontal Stacked Chart</h1>
+    <p>The following horizontal stacked bar chart shows how the number of fatal police shootings changed over the course of 2015.
+    </p>
+    <div id = "bar-chart"></div>
+
     <script src="https://d3js.org/d3.v7.min.js"></script>
-    <!-- <script src= "rings.js"></script> -->
+    <script src="rings.js"></script>
     <script src="line.js"></script>
+    <script src ="bar.js"></script>
+
 </body>
 </html>

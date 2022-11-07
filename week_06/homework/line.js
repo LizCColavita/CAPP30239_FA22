@@ -1,9 +1,9 @@
 /* D3 Line Chart */
-const height = 400, 
-    width = 800,
+const height = 300, 
+    width = 600,
     margin = ({ top: 15, right: 40, bottom: 40, left: 50 });
 
-const svg = d3.select("#line-chart") //not dependent on the data
+const svg = d3.select("#line-chart")
     .append("svg")
     .attr("viewBox", [0, 0, width, height]);
 
@@ -15,14 +15,12 @@ d3.csv('line.csv').then(data => {
         d.Count = +d.Count;
     }
 
-    console.log(data);
-
     let x = d3.scaleTime()
         .domain(d3.extent(data, d => d.Month))
         .range([margin.left + 5, width - margin.right]);
     
     let y = d3.scaleLinear()
-        .domain ([0, d3.max(data, d => d.Count)])
+        .domain ([0, d3.max(data, d => d.Count) + 10])
         .range([height - margin.bottom, margin.top])
 
     svg.append("g")
@@ -38,16 +36,16 @@ d3.csv('line.csv').then(data => {
       .attr("text-anchor", "end")
       .attr("x", width - margin.right)
       .attr("y", height)
-      .attr("dx", "0.5em")
-      .attr("dy", "-0.5em") 
+      .attr("dx", "0.2em")
+      .attr("dy", "-0.2em") 
       .text("Month");
     
     svg.append("text")
       .attr("class", "y-label")
       .attr("text-anchor", "end")
       .attr("x", -margin.top/2)
-      .attr("dx", "-0.5em")
-      .attr("y", 10)
+      .attr("dx", "-0.2em")
+      .attr("y", 15)
       .attr("transform", "rotate(-90)")
       .text("Count");
 
