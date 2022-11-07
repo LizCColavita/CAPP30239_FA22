@@ -1,3 +1,4 @@
+
 d3.json('rings.json').then((data) => {
     for (let d of data) {
         createRing(d);
@@ -5,7 +6,7 @@ d3.json('rings.json').then((data) => {
     });
 
 function createRing({ratio, values }) {
-    const height = 450,
+    const height = 400,
         width = 425,
         innerRadius = 80,
         outerRadius = 115,
