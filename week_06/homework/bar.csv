@@ -1,9 +1,9 @@
-region,num
-New England,28
-Mideast,114
-Southeast,412
-Great Lakes,138
-Plains,98
-Rockies,67
-Southwest,311
-Farwest,369
+Region,Black,Asian,Hispanic,Native,White,Other,Unspecified
+Southeast,144,1,16,1,218,1,31
+Farwest,54,12,108,7,142,7,39
+Rockies,8,2,14,1,38,0,4
+Southwest,45,2,85,5,158,1,15
+Plains,18,1,3,5,65,0,6
+Great Lakes,51,0,9,0,68,1,9
+New England,3,0,4,0,17,0,4
+Mideast,55,1,7,0,45,0,6

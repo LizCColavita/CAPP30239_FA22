@@ -6,39 +6,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Building Charts</title>
     <link rel="stylesheet" href="../styles.css"> 
-    <style>
-        #stacked-chart {
-            text-align: right;
-        }
 
-        #stacked-chart div {
-            color:white;
-            box-sizing:border-box;
-            border:solid 1px #fff;
-            padding: 10px;
-            display: inline-block;
-        }
-    </style>
 </head>
 <body>
     <div class= "container"></div>
-    <h1>Donut Charts</h1>
-    <p>The following donut charts represent the following ratios of the victims of police shootings in 2015: gender, those who fled,
-        and those with known mental health issues.
+    <h1>Simple Breakdown</h1>
+    <p>There were several indicator variables in the dataset, so I thought it would be appropriate to visualize those variables with donut charts.
+        The donut chart regarding gender of the police shooting victim is not all that surpising or unintiuitive; 
+        however, the other two regarding the fleeing the scene and having a mental illness are a bit more interesting. 
+        If victims of police shootings are not fleeing the scene, it makes one wonder why fatal use of force. This could suggest that 
+        alternatives to force, such as de-escalation techniques, might be useful in some situations. The final docut chart, regarding
+        known history of mental illness, is a tad contrary to popular narratives surrounding fatal encounters with police. Less than a quarter of victims 
+        in fatal police shootings had a known mental illness.
     </p>
     <div id = "ring-chart"></div>
 
     <div class="container"></div>
-    <h1>Line Chart</h1>
-    <p>The following line charts shows how the number of fatal police shootings changed over the course of 2015.
-    </p>
-    <div id = "line-chart"></div>
+        <h1>Fatal Police Shootings by Month</h1>
+        <p>The following line charts shows how the number of fatal police shootings changed over the course of 2015.
+        </p>
+        <p>
+            It could have been interesting to show changes in the months in various regions using a multi-line chart or a dropdown menu,
+            but I wasn't sure there would be enough variation to find anything interesting. In the end I decided on a single line chart and annotations to point out
+            interesting peaks and valleys.
+        </p>
+    <div id="line-chart"></div>
 
     <div class="container"></div>
-    <h1>Horizontal Stacked Chart</h1>
-    <p>The following horizontal stacked bar chart shows how the number of fatal police shootings changed over the course of 2015.
-    </p>
-    <div id = "bar-chart"></div>
+        <h1>Race & Police Shootings</h1>
+        <p>The following  bar chart shows how the number of fatal police shootings in each of region of the US, 
+            as defined by the <a href="https://data.oecd.org/interest/long-term-interest-rates.htm#indicator-charthttps://www.businessinsider.com/regions-of-united-states-2018-5#the-bureau-of-economic-analysis-goes-with-this-eight-region-map-of-the-us-its-regions-are-new-england-the-mideast-the-southeast-the-great-lakes-the-plains-the-southwest-the-rocky-mountains-and-the-far-west-9">Bureau of Economic Analysis</a>.
+            The regions are further broken down by race of the shooting victim. Granted this data is from 2015, 
+            but it is a bit surprising to see that the race with the most (absolute) victims of police shootings are white, 
+            followed by Black (Great Lakes, Southeast, Mideast, and Plains) and Asian (Farwest, Southwest, and Rockies) victims.
+        </p>  
+        <p>
+            This calls into question sensationalized headlines about police targeting of minorities. According to data from 2015,
+            there is no systemic pattern of police targeting racial minorities. Notably, more recent data may be more consistent with 
+            recent narratives of police targeting. A broader analysis of change over time could be interesting for further analysis.
+        </p>
+        <p>
+            I chose a stacked bar chart to represent this data to show how race categories comprise total numbers of police shooting victims in various regions.
+            The stacked bar chart is good at showing, parts of a whole, and the regional separation shows how the proportion of victims based on race 
+            differ throughout various regions.  For example, Asian victims in the Farwest, Southwest, and Rockies might have been lost using a broader national scope.
+            I think I'm right on the edge of having too many categories for a stacked bar chart; a tree map for each region could have been intersting as well.
+            I chose regions over states because including all states would have been too overwhelming and probably not all that informative.
+            Regions are more digestable categorization for my purposes here.
+        </p>
+    <div id="bar-chart"></div>
 
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <script src="rings.js"></script>

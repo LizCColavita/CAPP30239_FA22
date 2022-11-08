@@ -5,36 +5,77 @@ f = open('a3cleanedonly2015.json')
 data = json.load(f)
 f.close
 
-new_england = 0
-great_lakes = 0
-mideast = 0
-plains = 0
-southwest = 0
-rockies = 0
-farwest = 0
-southeast = 0
+new_england = {"Region": "New England", "Black": 0, "Asian": 0, "Hispanic": 0, "Native": 0, "White": 0, "Other": 0, "Unspecified": 0}
+great_lakes = {"Region": "Great Lakes", "Black": 0, "Asian": 0, "Hispanic": 0, "Native": 0, "White": 0, "Other": 0, "Unspecified": 0}
+mideast = {"Region": "Mideast", "Black": 0, "Asian": 0, "Hispanic": 0, "Native": 0, "White": 0, "Other": 0, "Unspecified": 0}
+plains = {"Region": "Plains", "Black": 0, "Asian": 0, "Hispanic": 0, "Native": 0, "White": 0, "Other": 0, "Unspecified": 0}
+southwest = {"Region": "Southwest", "Black": 0, "Asian": 0, "Hispanic": 0, "Native": 0, "White": 0, "Other": 0, "Unspecified": 0}
+rockies = {"Region": "Rockies", "Black": 0, "Asian": 0, "Hispanic": 0, "Native": 0, "White": 0, "Other": 0, "Unspecified": 0}
+farwest = {"Region": "Farwest", "Black": 0, "Asian": 0, "Hispanic": 0, "Native": 0, "White": 0, "Other": 0, "Unspecified": 0}
+southeast = {"Region": "Southeast", "Black": 0, "Asian": 0, "Hispanic": 0, "Native": 0, "White": 0, "Other": 0, "Unspecified": 0}
 
 for d in data:
     if (d["State"] == "RI") | (d["State"] == "ME") | (d["State"] == "NH") | (d["State"] == "VT") | (d["State"] == "MA") | (d["State"] == "CT"):
-        new_england += 1
+        race = d["Race"]
+        if not race:
+            new_england["Unspecified"] += 1
+        else:
+            new_england[race] += 1
+
     elif (d["State"] == "NY") | (d["State"] == "PA") | (d["State"] == "NJ") | (d["State"] == "DE") | (d["State"] == "DC") | (d["State"] == "MD"):
-        mideast += 1
+        race = d["Race"]
+        if not race:
+            mideast["Unspecified"] += 1
+        else:
+            mideast[race] += 1
+
     elif (d["State"] == "MI") | (d["State"] == "IL") | (d["State"] == "IN") | (d["State"] == "OH") | (d["State"] == "WI"):
-        great_lakes += 1
+        race = d["Race"]
+        if not race:
+            great_lakes["Unspecified"] += 1
+        else:
+            great_lakes[race] += 1
+
     elif (d["State"] == "IA") | (d["State"] == "MN") | (d["State"] == "MO") | (d["State"] == "ND") | (d["State"] == "SD") | (d["State"] == "NE") | (d["State"] == "KS"):
-        plains += 1
+        race = d["Race"]
+        if not race:
+            plains["Unspecified"] += 1
+        else:
+            plains[race] += 1
+
     elif (d["State"] == "TX") | (d["State"] == "OK") | (d["State"] == "NM") | (d["State"] == "AZ"):
-        southwest += 1
+        race = d["Race"]
+        if not race:
+            southwest["Unspecified"] += 1
+        else:
+            southwest[race] += 1
+
     elif (d["State"] == "MT") | (d["State"] == "MN") | (d["State"] == "CO") | (d["State"] == "UT") | (d["State"] == "ID"):
-        rockies += 1
+        race = d["Race"]
+        if not race:
+            rockies["Unspecified"] += 1
+        else:
+            rockies[race] += 1
+
     elif (d["State"] == "WA") | (d["State"] == "OR") | (d["State"] == "NV") | (d["State"] == "CA") | (d["State"] == "HI") | (d["State"] == "AK"):
-        farwest +=1
+        race = d["Race"]
+        if not race:
+            farwest["Unspecified"] += 1
+        else:
+            farwest[race] += 1
+
     else:
-        southeast += 1
+        race = d["Race"]
+        if not race:
+            southeast["Unspecified"] += 1
+        else:
+            southeast[race] += 1
 
-region = ["New England", "Mideast", "Southeast", "Great Lakes", "Plains", "Rockies", "Southwest", "Farwest"]
-count = [new_england, mideast, southeast, great_lakes, plains, rockies, southwest, farwest]
+regions_dict = [southeast, farwest, rockies, southwest, plains, great_lakes, new_england, mideast]
+csv_columns = regions_dict[1].keys()
 
-with open('bar.csv', 'w') as f:
-    writer = csv.writer(f)
-    writer.writerows(zip(region, count))
+with open('bar.csv', 'w') as csvfile:
+    writer = csv.DictWriter(csvfile, fieldnames=csv_columns)
+    writer.writeheader()
+    for data in regions_dict:
+        writer.writerow(data)

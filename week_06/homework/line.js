@@ -1,7 +1,7 @@
 /* D3 Line Chart */
-const height = 300, 
-    width = 600,
-    margin = ({ top: 15, right: 40, bottom: 40, left: 50 });
+const height = 250, 
+    width = 500,
+    margin = ({ top: 20, right: 50, bottom: 40, left: 50 });
 
 const svg = d3.select("#line-chart")
     .append("svg")
@@ -20,7 +20,7 @@ d3.csv('line.csv').then(data => {
         .range([margin.left + 5, width - margin.right]);
     
     let y = d3.scaleLinear()
-        .domain ([0, d3.max(data, d => d.Count) + 10])
+        .domain ([60, d3.max(data, d => d.Count) + 10])
         .range([height - margin.bottom, margin.top])
 
     svg.append("g")
@@ -36,15 +36,15 @@ d3.csv('line.csv').then(data => {
       .attr("text-anchor", "end")
       .attr("x", width - margin.right)
       .attr("y", height)
-      .attr("dx", "0.2em")
-      .attr("dy", "-0.2em") 
+      .attr("dx", "0.1em")
+      .attr("dy", "-0.1em") 
       .text("Month");
     
     svg.append("text")
       .attr("class", "y-label")
       .attr("text-anchor", "end")
       .attr("x", -margin.top/2)
-      .attr("dx", "-0.2em")
+      .attr("dx", "-0.1em")
       .attr("y", 15)
       .attr("transform", "rotate(-90)")
       .text("Count");
@@ -59,4 +59,21 @@ d3.csv('line.csv').then(data => {
         .attr("fill", "none")
         .attr("stroke", "steelblue");
 
+    svg.append("foreignObject")
+        .attr("x", 210)
+        .attr("y", 25)
+        .attr("width", 120)
+        .attr("height", 100)
+        .append('xhtml:div')
+        .append("p")
+        .html('Max: 152 in July');
+
+    svg.append("foreignObject")
+        .attr("x", 175)
+        .attr("y", 140)
+        .attr("width", 120)
+        .attr("height", 100)
+        .append('xhtml:div')
+        .append("p")
+        .html('Min: 103 in June');
     });
