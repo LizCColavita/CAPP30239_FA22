@@ -2,7 +2,7 @@
 (function barchart() {
     let height = 400,
     width = 600,
-    margin = ({ top: 50, right: 30, bottom: 50, left: 30});
+    margin = ({ top: 40, right: 20, bottom: 40, left: 20});
 
     const svg = d3.select("#bar-chart")
       .append("svg")
