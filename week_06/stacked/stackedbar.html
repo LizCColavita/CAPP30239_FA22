@@ -42,7 +42,7 @@
         .attr("transform", `translate(${margin.left},0)`)
         .call(d3.axisLeft(y).tickSize(-width + margin.left + margin.right))
       
-      //protein,carbs,fiber
+      //create subgroups
       const subgroups = data.columns.slice(1);
 
       const color = d3.scaleOrdinal(subgroups,['#e41a1c','#377eb8','#4daf4a']); //scaleOrdinal maps colors to the subgroups

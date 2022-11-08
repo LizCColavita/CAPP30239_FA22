@@ -1,5 +1,5 @@
 * {
-    font-family: 'Work Sans',Arial, Helvetica, sans-serif;
+    font-family: 'Sans Serif',Arial, Helvetica, sans-serif;
   }
 
   p {
@@ -11,7 +11,12 @@
     margin: 0 auto;
   }
 
-  #chart {
+  #line-chart {
+    width: 100%;
+    text-align: center;
+  }
+
+  #ring-chart{
     width: 100%;
     text-align: center;
   }
@@ -46,7 +51,7 @@
   }
 
   svg text {
-    font-size: 12px;
+    font-size: 10px;
   }
   
   .ring svg text {
@@ -62,7 +67,8 @@
   }
 
   foreignObject p {
-    font-size: 10px;
+    font-size: 5px;
+    color: #67a9cf;
   }
 
  
