@@ -11,7 +11,7 @@ const svg = d3.select("#chart")
 
 /* load data and convert variables into the proper type/form */
 d3.csv('long-term-interest-canada.csv').then(data => {
-    
+    console.log(data)
     let timeParse = d3.timeParse("%Y-%m"); //define function to convert Month
     
     /* loop through records and reformat Month and Num */
