@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Numbers Game</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@600&family=Lato:wght@300&family=Open+Sans:wght@300&family=Source+Sans+Pro:wght@300;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class = "container">
+        <h1>A Numbers Game</h1>
+        <p>
+            Campaign donations of professional sports team owners generally lean toward the right of the political spectrum, 
+            and by and largely, have decreased significantly between the 2016 and 2020 elections. In aggregation, these trends hold across leagues and across 
+            gender of the owner. Looking at all leagues combined, women owners actually skew more to the right than their male counterparts. 
+            However, these averages and aggregations hide some anomalies.
+            
+        </p>
+        </p>
+            <b>The anomalies: the MLB, NFL, and WNBA.</b>
+        </p>
+
+        <div>
+            <h2>Women MLB Owners' Unique Campaign Donation Patterns</h2>
+            <div id="grouped-bar-MLB"></div>
+        </div>
+
+        <div>
+            <h2>NFL's High Proportion of Women Owners</h2>
+            <div id="diverging-bar-NFL"></div>
+        </div>
+    </div>
+
+    <div class = "sidebar">
+        <h3>The Playing Field</h3>
+            <p>
+            An overview of the sports league political campaign donations.
+            </p>
+        <div>
+            <h4>Breakdown by League</h4>
+            <div id="league-sidebar"></div>
+
+            <h4>Breakdown by Party</h4>
+            <div id="party-sidebar"></div>
+
+            <h4>Breakdown By Gender</h4>
+            <p> Propportion of campaign donations made by women owners is on par with, even slightly more than, the ratio of women owners.
+            </p>
+            <div id="gender-donut-sidebar"></div>
+        </div>
+    
+    </div>
+
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+
+    <script src="horizontalBarChart.js"></script>
+    <script src="groupedBarChart.js"></script>
+    <script src="divergingBarChart.js"></script>
+    <script src="container.js"></script>
+    <script src="sidebar.js"></script>
+
+</body>
+</html>

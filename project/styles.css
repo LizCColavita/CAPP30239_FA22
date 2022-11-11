@@ -1,0 +1,48 @@
+
+.container {
+    font-family: 'Source Sans Pro';
+    margin-left: 275px;
+    color:#36454f;
+    position: flex;
+    margin-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.container p {
+    font-size: 18px;
+}
+
+.sidebar {
+    height: 100%;
+    width: 250px;
+    position: float;
+    top: 10;
+    left: 10;
+    background-color: #ededed;
+    color: #36454f;
+    border-radius: 10px;
+    }
+
+.sidebar p {
+    font-family: 'Source Sans Pro';
+    font-size: 14px;
+    text-align: center;
+}
+
+.sidebar h3 {
+    text-align: center;
+    padding-top: 14px;
+    font-size: 24px;
+    font-family: 'Crimson Text';
+
+}
+.sidebar div {
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 14px;
+    color: #36454f;
+    display: block;
+    font-family: 'Source Sans Pro', sans-serif;
+
+}
