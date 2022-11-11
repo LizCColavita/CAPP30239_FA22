@@ -58,10 +58,33 @@ Promise.all([
         d.amount = +(d.amount/1000000).toFixed(2)
     }
 
+    // create object for party data
+    let partyData = [{name: "party", size: null},
+        {name: "party.Republican", size: 34.2},
+        {name: "party.Bipartisan-Independent", size: 1.8},
+        {name: "party.Democrat", size: 10.1}];
+
     // create donut charts
     for (let d of genderData) {
         createRing(d);
-    }
+    };
+
+    // create treemap
+    let colors3 = ['#ca0020', '#c2a5cf', '#0571b0'];
+
+    let treeMap = Treemap(partyData, {
+        path: d => d.name.replace(/\./g, "/"), // e.g., "flare/animate/Easing"
+        value: d => d?.size,
+        group: d => d.name.split(".")[1],
+        label: (d, n) => [...d.name.split(".").pop().split(/(?=[A-Z][a-z])/g), n.value.toLocaleString("en")].join("\n"),
+        title: (d, n) => `${d.name}\n${n.value.toLocaleString("en")}`, // text to show on hover
+        tile: d3.treemapBinary,
+        colors: colors3,
+        fillOpacity: 0.8,
+
+    })
+
+    document.getElementById("party-sidebar").append(treeMap);
 
     // create horizontal bar chart
     let horizontalBar = BarChart(leagueData, {
