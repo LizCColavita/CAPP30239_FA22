@@ -80,7 +80,7 @@ Promise.all([
         title: (d, n) => `${d.name}\n${n.value.toLocaleString("en")}`, // text to show on hover
         tile: d3.treemapBinary,
         colors: colors3,
-        fillOpacity: 0.8,
+        fillOpacity: 1,
 
     })
 
