@@ -11,12 +11,15 @@ Promise.all([
     //create necessary array
 
     let data = [
-        {category: "Men", party: "Republican",  amount: 0}, 
-        {category: "Women", party: "Republican",  amount: 0},
+        {category: "All Men", party: "Republican",  amount: 0}, 
+        {category: "All Women", party: "Republican",  amount: 0},
         {category: "MLB Women", party: "Republican",  amount: 0},
-        {category: "Men", party: "Democrat",  amount: 0}, 
-        {category: "Women", party: "Democrat",  amount: 0},
+        {category: "All Men", party: "Democrat",  amount: 0}, 
+        {category: "All Women", party: "Democrat",  amount: 0},
         {category: "MLB Women", party: "Democrat",  amount: 0},
+        {category: "All Men", party: "Other",  amount: 0}, 
+        {category: "All Women", party: "Other",  amount: 0},
+        {category: "MLB Women", party: "Other",  amount: 0}
 ];
         
 
@@ -36,7 +39,14 @@ Promise.all([
             } else {
                 data[4].amount += d.Amount;
             } 
-        } 
+        } else {
+            if (d.Female == "0") {
+                data[6].amount += d.Amount;
+            } else {
+                data[7].amount += d.Amount;
+            } 
+
+        }
     };
 
     for (let d of clean) {
@@ -48,25 +58,27 @@ Promise.all([
                     data[2].amount += d.Amount;
                 } else if (party == "Democrat"){
                     data[5].amount += d.Amount;
-                } 
+                } else {
+                    data[8].amount += d.Amount;
+                }
     }}};
     console.log(data)
     // change format of amount values - put into percents
     for (let d of data){
-        if (d.category == "Men"){
-            d.amount = +((d.amount/39247165) * 100).toFixed(2);
-        } else if (d.category == "Women") {
-            d.amount = +((d.amount/6882528) * 100).toFixed(2);
+        if (d.category == "All Men"){
+            d.amount = +((d.amount/40073415) * 100).toFixed(2);
+        } else if (d.category == "All Women") {
+            d.amount = +((d.amount/6905282) * 100).toFixed(2);
         } else {
-            d.amount = +((d.amount/1752824) * 100).toFixed(2)
+            d.amount = +((d.amount/1772824) * 100).toFixed(2)
         }
     };
     console.log(data)
 
     // create domain arrays
-    let parties = ["Republican", "Democrat"];
-    let colors = ['#ca0020','#0571b0'];
-    let groups = ["Men", "Women", "MLB Women"];
+    let parties = ["Republican", "Democrat", "Other"];
+    let colors = ['#ca0020','#0571b0', '#c2a5cf'];
+    let groups = ["All Men", "All Women", "MLB Women"];
 
     // create grouped bar chart
     let groupedBar = GroupedBarChart(data, {

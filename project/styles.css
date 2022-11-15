@@ -35,6 +35,7 @@ svg {
     font-family: 'Source Sans Pro';
     font-size: 14px;
     text-align: center;
+    padding: 10px;
 }
 
 .sidebar h3 {
@@ -45,11 +46,11 @@ svg {
 
 }
 .sidebar div {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 30px;
+    padding-right: 10px;
     font-size: 14px;
     color: #36454f;
-    display: block;
+    display: float;
     font-family: 'Source Sans Pro', sans-serif;
 
 }

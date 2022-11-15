@@ -82,7 +82,7 @@ function GroupedBarChart(data, {
       .selectAll("rect")
       .data(I)
       .join("rect")
-        .attr("x", i => xScale(X[i]) + xzScale(Z[i]))
+        .attr("x", i => xScale(X[i]) + xzScale(Z[i]) - 6)
         .attr("y", i => yScale(Y[i]))
         .attr("width", xzScale.bandwidth())
         .attr("height", i => yScale(0) - yScale(Y[i]))
@@ -95,7 +95,8 @@ function GroupedBarChart(data, {
         .attr("x", i => xScale(X[i]) + xzScale(Z[i]))
         .attr("y", i => yScale(Y[i]) - 8)
         .text(i => (Y[i]).toFixed() + "%")
-        .attr("height", i => yScale(Y[i]) + 10);
+        .attr("height", i => yScale(Y[i]) + 10)
+        .attr("font-size", 12);
   
     if (title) bar.append("title")
         .text(title);
