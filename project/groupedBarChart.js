@@ -87,10 +87,19 @@ function GroupedBarChart(data, {
         .attr("width", xzScale.bandwidth())
         .attr("height", i => yScale(0) - yScale(Y[i]))
         .attr("fill", i => zScale(Z[i]));
+
+    const label = svg.append("g")
+      .selectAll("text")
+      .data(I)
+      .join("text")
+        .attr("x", i => xScale(X[i]) + xzScale(Z[i]))
+        .attr("y", i => yScale(Y[i]) - 8)
+        .text(i => (Y[i]).toFixed() + "%")
+        .attr("height", i => yScale(Y[i]) + 10);
   
     if (title) bar.append("title")
         .text(title);
-  
+
     svg.append("g")
         .attr("transform", `translate(0,${height - marginBottom})`)
         .call(xAxis);
