@@ -1,3 +1,4 @@
+// largely based off of code from https://github.com/tiffanyfrance/CAPP30239_FA22/blob/main/week_08/parallel-set/parallel-set.js
 
 const width = 1000,
   height = 600,
@@ -18,7 +19,7 @@ d3.csv("data/sankey.csv").then((data) => {
   }
 
   let leagues = [...new Set(data.map(d => d.source))];//spread syntax
-  // console.log(genders);
+  //console.log(leagues);
 
   let graph = nodeLinkData(data, ["source", "target"]);
 
@@ -34,7 +35,7 @@ d3.csv("data/sankey.csv").then((data) => {
     ]);
 
   let color = d3.scaleOrdinal()
-    .range(d3.schemePaired)
+    .range(['#a6cee3','#1f78b4','#b2df8a','#33a02c','#fb9a99','#e31a1c','#fdbf6f','#ff7f00','#cab2d6','#6a3d9a','#ffff99','#b15928'])
     .domain(leagues);
 
   const { nodes, links } = sankey(graph); // modifies and returns graph
@@ -69,7 +70,7 @@ d3.csv("data/sankey.csv").then((data) => {
         .attr("opacity", 0.75);
     })
     .on("click", function(e, d) {
-      let str = `${d.source.name} earned ${d.source.value.toLocaleString()} ${d.target.name} Degrees`;
+      let str = `${d.source.name} earned ${d.source.value.toLocaleString()} ${d.target.name} Parties`;
       d3.select("h2")
         .html(str);
     })
@@ -82,7 +83,7 @@ d3.csv("data/sankey.csv").then((data) => {
     .append("text")
     .attr("x", 0)
     .attr("y", 16)
-    .text("Gender");
+    .text("League x Gender of Owner");
 
   svg.append("g")
     .style("font-weight", "bold")
@@ -90,7 +91,7 @@ d3.csv("data/sankey.csv").then((data) => {
     .attr("x", width - margin.left)
     .attr("y", 16)
     .attr("text-anchor", "end")
-    .text("Degrees");
+    .text("Parties");
 
   svg.append("g")
     .selectAll("text")

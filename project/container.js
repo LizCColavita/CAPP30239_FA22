@@ -118,4 +118,6 @@ Promise.all([
     });
 
     document.getElementById("diverging-bar-NFL").append(divergingBar);
+
+
   });
