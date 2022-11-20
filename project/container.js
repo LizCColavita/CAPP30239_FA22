@@ -94,7 +94,7 @@ Promise.all([
         width: 400,
         });
 
-    document.getElementById("grouped-bar-MLB").append(groupedBar);
+    document.getElementById("grouped-bar").append(groupedBar);
 
     // create array for diverging bar chart
     let data2 = [{league: "WNBA", average: 15.8, ratio: 17.4},
