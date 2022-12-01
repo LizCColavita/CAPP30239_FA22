@@ -16,30 +16,73 @@
     <main>
     <div class = "container">
         <h1>A Numbers Game</h1>
-        <p> Data Source: <a href="https://github.com/fivethirtyeight/data/tree/master/sports-political-donations"> FiveThirtyEight</a> </p>
         <p>
-            Campaign donations of professional sports team owners generally lean toward the right of the political spectrum, 
-            and by and large, have decreased significantly between the 2016 and 2020 elections. In aggregation, these trends hold across leagues and across 
-            gender of the owner.     
+            Women are making headlines in sports at both national and international levels, from professional leagues to collegiate athletics. 
+            Just this week, Julianne Sitch, head coach of the University of Chicago men's soccer team, is the 
+            <a href="https://news.uchicago.edu/story/soccer-coach-makes-history-she-leads-mens-team-ncaa-final-four?utm_source=newsletter_CTA&utm_medium=email&utm_campaign=UChicago_News_M11_29_2022&mkt_tok=MjUwLUNRSC05MzYAAAGIY9gmIDfOtWiv4XSolUA6kWvv64TfhhIqrNyTDgmN8ZShai0osW0_n-i-YmepgcDVOqPsYo8xvrgqtJNJz9fR-UuSSvVS02B-aGCMaECmlgXm">first woman to lead a men's soccer 
+            team to the NCAA final four</a> - in her first year in the position no less.  On the world stage, Stéphanie Frappart will lead the 
+            <a href="https://www.nytimes.com/2022/12/01/sports/soccer/world-cup-women-referee-crew.html"> first all-woman referee team at a World Cup.</a>
         </p>
         <p>
-            However, these averages and aggregations hide some anomalies.<b>The anomalies: the MLB, WNBA, and NFL.</b>
+            And we best not forget that professional sports are big businesses. From the field to the boardroom, women are making moves. 
+            With its long history in the US and its moniker as “Americas pastime,” we see women trailblazing in the sport of baseball as 
+            far back as the late 1800s. In 1898, Lizzie Arlington was the 
+            <a href="https://en.wikipedia.org/wiki/Timeline_of_women%27s_sports"> first woman to sign a professional baseball contract</a> 
+            as a pitcher with the Philadelphia Reserves. Eleven years after the turn of the century, 
+            <a href="https://medium.com/sportsraid/helene-hathaway-robison-britton-the-first-woman-to-own-a-major-league-baseball-team-23d175bb7ff2">
+            Helene Hathaway Robison-Britton inherited the St. Louis Cardinals</a> from her father, becoming the first woman to own a major league baseball team.
+            After a battle for a controlling stake in the Los Angeles Lakers amongst the children of former owner Dr. Jerry Buss, 
+            Jeanie Buss inherited controlling ownership in 2017 and in 2020 became the first woman owner in professional sports to 
+            <a href="https://www.lamag.com/culturefiles/jeanie-buss-lakers-owner/">win a championship under her watch</a>.
+        </p>
+        <p>
+            Data from <a href="https://github.com/fivethirtyeight/data/tree/master/sports-political-donations">FiveThirtyEight</a> outlines the political campaign donations of owners and commissioners in six sports leagues, 
+            namely the MLB, NBA, NHL, NFL, WNBA, and NASCAR, in the 2016, 2018, and 2020 elections. By and large, donations are to 
+            Republican-affiliated campaigns, and donations have dropped off in the four years between the 2016 and 2020 presidential 
+            elections. These trends hold across league and across the gender of the owner, with a few exceptions.
         </p>
 
-        <div>
-            <h2>Unique Campaign Donation Patterns</h2>
-            <h3>Women MLB Owners and Men WNBA Owners Donate More to Democratic Campaigns</h3>
-            <div id="grouped-bar"></div>
-            <p> Data Source: <a href="https://github.com/fivethirtyeight/data/tree/master/sports-political-donations"> FiveThirtyEight</a> </p>
-  
-            <div id="parallel-set"></div>
-            <p> Data Source: <a href="https://github.com/fivethirtyeight/data/tree/master/sports-political-donations"> FiveThirtyEight</a> </p>
+        <p>
+            Hidden within these averages and aggregations are some exceptions in the <b>MLB, WNBA, and NFL</b>.
+        </p>
+
+        
+        <div class = "flex-container">
+            <h2>Women MLB Owners and Men WNBA Owners Donate More to Democrat-Affiliated Campaigns</h2>
+            <div id="grouped-bar" class="flex-item"></div>
+
+            <div class="flex-item">
+
+
+            </div>
+            <!-- <div id="parallel-set"></div> -->
         </div>
+        
 
         <div>
-            <h2>NFL's High Proportion of Women Owners</h2>
+            <h2>Nearly Half of all NFL Owners are Women</h2>
+    
+            <p>
+                Of the owners included in FiveThirtyEight's dataset, nearly 16%, or 1 in 6 owners, are women. Encouragingly, 
+                the proportion of women owners is proportional to their political campaign donations, that is women owners account for 
+                just over 17% of political campaign donation in the dataset.
+            </p>
+
+            <p>
+                However, there are large disparities across leagues. Notably, women owners in the NFL are skewing the aggregate proportion 
+                of women sports team owners. Women account for 46% of owners in the NFL. The WNBA is the league with the second-highest 
+                proportion of women owners with over 17%. On the other end of the spectrum are the MLB with nearly 5% women owners, and 
+                NASCAR with no women owners.
+            </p>
+            <div class = "percents">
+                <h6 style = "font-family: 'Crimson Text'; font-size: 48px">46% <p> of owners in the NFL are women</p> </h6>
+                <h6 style = "font-family: 'Crimson Text'; font-size: 48px">17% <p> of owners in the WNBA are women</p> </h6>
+            </div>
+
             <div id="diverging-bar-NFL"></div>
             <p> Data Source: <a href="https://github.com/fivethirtyeight/data/tree/master/sports-political-donations"> FiveThirtyEight</a> </p>
+            
+
         </div>
 
         <div> 
@@ -84,7 +127,7 @@
     <script src="groupedBarChart.js"></script>
     <script src="divergingBarChart.js"></script>
     <script src="parallel-set.js"></script>
-    <script src="container.js"></script>
+    <script src="barcharts.js"></script>
     <script src="sidebar.js"></script>
 
 </body>

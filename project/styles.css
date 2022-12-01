@@ -11,7 +11,7 @@ svg {
     color:#36454f;
     position: flex;
     margin-top: 10px;
-    padding: 30px;
+    padding: 20px;
     flex: 1;
     overflow: auto;
 }
@@ -19,6 +19,7 @@ svg {
 .container p {
     font-size: 18px;
 }
+
 
 .sidebar {
     height: 100%;
@@ -51,6 +52,5 @@ svg {
     font-size: 14px;
     color: #36454f;
     display: float;
-    font-family: 'Source Sans Pro', sans-serif;
-
+    font-family: 'Source Sans Pro';
 }
