@@ -107,7 +107,7 @@ Promise.all([
         yLabel: "% of Total Campaign Donations per Group",
         xLabel: "Group of Owners",
         colors: colors,
-        xPadding: 0.3,
+        xPadding: 0.25,
         width: 400,
         });
 

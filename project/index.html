@@ -8,7 +8,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
-    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@600&family=Lato:wght@300&family=Open+Sans:wght@300&family=Source+Sans+Pro:wght@300;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@600&family=Lato:wght@300&family=Open+Sans:wght@300&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -25,13 +25,15 @@
         </p>
         <p>
             And we best not forget that professional sports are big businesses. From the field to the boardroom, women are making moves. 
-            With its long history in the US and its moniker as “Americas pastime,” we see women trailblazing in the sport of baseball as 
+            With its long history in the US and its moniker as “America's pastime,” we see women trailblazing in baseball as 
             far back as the late 1800s. In 1898, Lizzie Arlington was the 
             <a href="https://en.wikipedia.org/wiki/Timeline_of_women%27s_sports"> first woman to sign a professional baseball contract</a> 
             as a pitcher with the Philadelphia Reserves. Eleven years after the turn of the century, 
             <a href="https://medium.com/sportsraid/helene-hathaway-robison-britton-the-first-woman-to-own-a-major-league-baseball-team-23d175bb7ff2">
             Helene Hathaway Robison-Britton inherited the St. Louis Cardinals</a> from her father, becoming the first woman to own a major league baseball team.
-            After a battle for a controlling stake in the Los Angeles Lakers amongst the children of former owner Dr. Jerry Buss, 
+        </p>
+        <p>
+            Over a century later, after a battle for a controlling stake in the Los Angeles Lakers amongst the children of former owner Dr. Jerry Buss, 
             Jeanie Buss inherited controlling ownership in 2017 and in 2020 became the first woman owner in professional sports to 
             <a href="https://www.lamag.com/culturefiles/jeanie-buss-lakers-owner/">win a championship under her watch</a>.
         </p>
@@ -43,7 +45,7 @@
         </p>
 
         <p>
-            Hidden within these averages and aggregations are some exceptions in the <b>MLB, WNBA, and NFL</b>.
+            Hidden within these averages and aggregations are some anomalies in the <b>MLB, WNBA, and NFL</b>.
         </p>
 
         
@@ -52,7 +54,9 @@
             <div id="grouped-bar" class="flex-item"></div>
 
             <div class="flex-item">
+                <p>
 
+                </p>
 
             </div>
             <!-- <div id="parallel-set"></div> -->
@@ -100,20 +104,17 @@
     
     <div class = "sidebar">
         <h3>The Playing Field</h3>
-        <p> Data Source: <a href="https://github.com/fivethirtyeight/data/tree/master/sports-political-donations"> FiveThirtyEight</a> </p>
-            <p>
-            An overview of the sports league political campaign donations.
-            </p>
+            <p> An overview of the sports league political campaign donations.</p>
         <div>
-            <h4>Breakdown by Party</h4>
-            <div id="party-sidebar"></div>
-
             <h4>Breakdown by League</h4>
             <div id="league-sidebar"></div>
 
+            <h4>Breakdown by Party</h4>
+            <div id="legend-1" style = "padding-left: 8px; padding-bottom: 8px;"></div>
+            <div id="party-sidebar"></div>
+
             <h4>Breakdown By Gender</h4>
-            <p> Proportion of campaign donations made by women owners is on par with the ratio of women owners.
-            </p>
+            <p> Proportion of campaign donations made by women owners is on par with the ratio of women owners.</p>
             <div id="gender-donut-sidebar"></div>
 
         </div>
@@ -123,6 +124,7 @@
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-sankey/0.12.3/d3-sankey.min.js" integrity="sha512-KK15oKpabNDaLpWinMtNfTqy/V7pzlc2FRG174PfASes7RRx6TAsua8HJdRTKo8+BLvPBKNIkL7kXWcz5HoqqA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="horizontalBarChart.js"></script>
+    <script src="Legend.js"></script>
     <script src="treeMap.js"></script>
     <script src="groupedBarChart.js"></script>
     <script src="divergingBarChart.js"></script>

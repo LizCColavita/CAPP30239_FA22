@@ -11,20 +11,9 @@ Promise.all([
     // create array for overall gender data
     let genderData = [
         {category: "Number of Owners", values: [{gender: "Female", amount: 25}, {gender: "Male", amount: 133}]},
-        {category: "Donations", values: [{gender: "Female", amount: 0}, {gender: "Male", amount: 0}]}
+        {category: "Donations", values: [{gender: "Female", amount: 6.9}, {gender: "Male", amount: 40.1}]}
     ];
-
-    for (let d of unseparated) {
-        d.Amount = +d.Amount
-        owner = d.Owner
-        if (d.Female == "0") {
-            genderData[1].values[1].amount += d.Amount;
-        } else {
-            genderData[1].values[0].amount += d.Amount;
-        }  
-        };
-
-    console.log(genderData)    
+  
 
     // create array for overall league data
     let leagueData = [
@@ -64,6 +53,7 @@ Promise.all([
         {name: "party.Bipartisan-Independent", size: 1.8},
         {name: "party.Democrat", size: 10.1}];
 
+        
     // create donut charts
     for (let d of genderData) {
         createRing(d);
@@ -76,13 +66,14 @@ Promise.all([
         path: d => d.name.replace(/\./g, "/"), // e.g., "flare/animate/Easing"
         value: d => d?.size,
         group: d => d.name.split(".")[1],
-        label: (d, n) => [...d.name.split(".").pop().split(/(?=[A-Z][a-z])/g), n.value.toLocaleString("en")].join("\n"),
-        title: (d, n) => `${d.name}\n${n.value.toLocaleString("en")}`, // text to show on hover
+        //label: (d, n) => `${d.name.split(".")[1]}\n${"$" + n.value.toLocaleString("en") + " mil"}`,
+        title: (d, n) => `${d.name.split(".")[1]}\n${"$" + n.value.toLocaleString("en") + " mil"}`, // text to show on hover
         tile: d3.treemapBinary,
         colors: colors3,
         fillOpacity: 1,
 
     })
+
 
     document.getElementById("party-sidebar").append(treeMap);
 
@@ -144,7 +135,7 @@ function createRing({ category, values }) {
       .attr("d", arc);
   
     svg.append("g")
-      .attr("font-size", 10)
+      .attr("font-size", 14)
       .attr("text-anchor", "middle")
       .selectAll("text")
       .data(arcs)

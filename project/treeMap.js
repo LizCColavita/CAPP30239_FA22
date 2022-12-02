@@ -83,7 +83,8 @@ function Treemap(data, { // data is either tabular (array of objects) or hierarc
         .attr("style", "max-width: 100%; height: auto; height: intrinsic;")
         .attr("font-family", "sans-serif")
         .attr("font-size", 10);
-  
+    
+
     const node = svg.selectAll("a")
       .data(leaves)
       .join("a")
@@ -125,6 +126,7 @@ function Treemap(data, { // data is either tabular (array of objects) or hierarc
           .attr("fill-opacity", (d, i, D) => i === D.length - 1 ? 0.7 : null)
           .text(d => d);   
     }
-  
+
+
     return Object.assign(svg.node(), {scales: {color}});
   }

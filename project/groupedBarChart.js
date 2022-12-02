@@ -73,7 +73,7 @@ function GroupedBarChart(data, {
             .attr("stroke-opacity", 0.1))
         .call(g => g.append("text")
             .attr("x", -marginLeft)
-            .attr("y", 10)
+            .attr("y", height + 10)
             .attr("fill", "currentColor")
             .attr("text-anchor", "start")
             .text(yLabel));
