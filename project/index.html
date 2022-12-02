@@ -55,13 +55,67 @@
 
             <div class="flex-item">
                 <p>
-
+                    Owners of MLB teams comprise over 46% of political campaigns donations at $21.68 million. This is nearly double the political
+                    contributions of the runner-up league in terms of donations, which is the NBA at $12.03 million. In comparison with the 
+                    five other sports leagues in this dataset, the sheer size of MLB owner's political donations is of particular interest.
+                </p>
+                <p>
+                    Yet, a deeper dive reveals a complete diveregence from the normal donating patterns across most leagues, even when 
+                    accounting for the gender of the team owner. <b>Of Women MLB owners' political donations, 97% went to Democrat-affiliated campaigns.</b>
+                    This is in stark contrast with all women owners across leagues wherein 32% of donations went to Democratic campaigns. The difference 
+                    becomes even more stark when looking at all men owners' donations, of which 20% of donations went to Democratic coffers.
+                </p>
+                <p>
+                    Though MLB team owners overall account for a significant portion of sports owners' political contributions, women owners 
+                    only account for 8.2% of donations in the league. Moreover, if one were to break down donations by league and gender of the owner into 11 categories 
+                    (two genders across six leagues, with the the exception of NASCAR which has no women owners), women MLB owners come in 7th totaling 
+                    $1.77 million in campaign donations. Unsurprisingly, their men counterparts rank first at $19.9 million.
+                </p>
+                <p>
+                    Figuring out why women MLB owners' donation patterns deviate so strongly from the norm is beyond the scope of this dataset and 
+                    not readily explained upon further investigation of the MLB fanbase. Figures from a <a href="https://www.statista.com/statistics/1174866/political-affiliation-mlb-fans/">2020 survey of MLB fans</a> 
+                    shows that on average, 38% of MLB fans identify as Democrats. <a href="https://www.forbes.com/sites/kirkwakefield/2021/04/05/major-league-baseball-at-odds-with-itself-and-its-fans/?sh=740bb5d55357">Further analysis</a> 
+                    reveals a deep split amongst MLB fans regarding the MLB's decision to move the 2021 All-Star Game from Atlanta, GA 
+                    following legislation that restricted voting rights of marginalized groups. MLB's more traditional fanbase - more conservative Boomers 
+                    and Gen X fans - views are quite different from Millennial fans. Millennial fans, regardless of political ideology, were more likely to view
+                    the move for the 2021 All-Star Game more positively. 
+                </p>
+                <p>
+                    Nor do donations or rhetoric from the League Commissioner Robert Manfred indicate a noteworthy liberal bend. Manfred 
+                    was quoted in <a href="https://www.espn.com/mlb/story/_/id/31183822/mlb-moving-all-star-game-atlanta-georgia-voting-law"> an ESPN article</a> 
+                    after the All-Star Game relocation announcement, "In 2020, MLB became the first professional sports league to join 
+                    the non-partisan Civic Alliance to help build a future in which everyone participates in shaping the United States." A non-partisan 
+                    campaign for democratic participation is not particularly radical. Furthermore, Manfred's political contributions, albeit incredibly 
+                    small totaling $5200, went to Republican-affiliated campaigns in 2016 and 2018.
+                </p> 
+                <p> 
+                    Overall, fans are not incredibly left-leaning, despite perhaps a growing schism in the fanbase. The commissioner has publicly supported voting access and 
+                    a participatory democracy. This all does very little to explain the overwhelming propensity for women owners to donate to 
+                    Democrat-affiliated political campaigns.
+                </p>
+         
+                <p>
+                    Perhaps intuitively, the WNBA is the only league in which donations to Democratic campaigns outpace donations to Republican campaigns. 
+                    52% of WNBA owners donations went to Democrat-affiliated campaigns. For comparison, 22.8% of donations across leagues when to Democratic 
+                    recipients. Interestingly, it was <b>men owners in the WNBA driving the leftward lean of league's political donations</b>. 
                 </p>
 
             </div>
-            <!-- <div id="parallel-set"></div> -->
+            <h4> Donation Patterns of WNBA Owners</h4>
+            <div id="legend-2"></div>
+            <div id="WBNA-donuts" class="flex-item"></div>
+            <div class="flex-item">
+                <p>
+                    Dissecting the WNBA numbers by gender, men owners' contributions comprise 68% of all donations from WNBA owners, and 72% of their political dollars went to Democratic campaigns. Of the 32% of WNBA donations 
+                    that were made by women owners, nearly 90% went to Republican campaigns - the highest percentage of women owners' contributions to 
+                    Republican campaigns across leagues that have women owners.
+                </p>
+
+            </div>
+
         </div>
         
+        <!-- <div id="parallel-set"></div> -->
 
         <div>
             <h2>Nearly Half of all NFL Owners are Women</h2>
@@ -123,12 +177,14 @@
     </main>
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-sankey/0.12.3/d3-sankey.min.js" integrity="sha512-KK15oKpabNDaLpWinMtNfTqy/V7pzlc2FRG174PfASes7RRx6TAsua8HJdRTKo8+BLvPBKNIkL7kXWcz5HoqqA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="d3-color-legend.js"></script>
     <script src="horizontalBarChart.js"></script>
     <script src="Legend.js"></script>
     <script src="treeMap.js"></script>
     <script src="groupedBarChart.js"></script>
+    <script src="Legend-2.js"></script>
+    <script src="WNBA-donuts.js"></script>
     <script src="divergingBarChart.js"></script>
-    <script src="parallel-set.js"></script>
     <script src="barcharts.js"></script>
     <script src="sidebar.js"></script>
 

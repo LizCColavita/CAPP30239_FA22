@@ -108,7 +108,7 @@ Promise.all([
         xLabel: "Group of Owners",
         colors: colors,
         xPadding: 0.25,
-        width: 400,
+        width: 550
         });
 
     document.getElementById("grouped-bar").append(groupedBar);

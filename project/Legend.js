@@ -9,4 +9,3 @@ var svg = d3.select("#legend-1")
     svg.append("text").attr("x", 15).attr("y", 5).text("Republican").style("font-size", "10px").attr("alignment-baseline","middle")
     svg.append("text").attr("x", 85).attr("y", 5).text("Democrat").style("font-size", "10px").attr("alignment-baseline","middle")
     svg.append("text").attr("x", 155).attr("y", 5).text("Bipartisan/Independent").style("font-size", "10px").attr("alignment-baseline","middle")
-
