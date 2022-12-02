@@ -123,7 +123,7 @@ Promise.all([
     ]
 
     // create diverging bar chart
-    let colors2 = ['#757C80',' #800080'];
+    let colors2 = ['#757C80','#800080'];
 
     let divergingBar = DivergingBarChart(data2, {
         x: d => d.ratio - d.average,
@@ -136,5 +136,23 @@ Promise.all([
 
     document.getElementById("diverging-bar-NFL").append(divergingBar);
 
+    // create array for stacked WNBA horizontal bar chart
+    let data3 =[{league: "WNBA", gender: "Men", ratio: 68},
+        {league: "WNBA", gender: "Women", ratio: 32}]
+    
+    // create horizontal stacked bar chart
+    let stackedBar = StackedBarChart(data3, {
+        x: d => d.ratio,
+        y: d => d.league,
+        z: d => d.gender,
+        colors: colors2,
+        width: 900,
+        height: 75,
+        title: d => d.ratio,
+        marginLeft: 100,
+
+    })
+
+    document.getElementById("WNBA-bar").append(stackedBar);
 
   });

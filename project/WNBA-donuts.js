@@ -17,13 +17,6 @@ for (let d of WNBA) {
     createRingsWNBA(d);
 };
 
-// add legend
-let categories = ["Democrat", "Republican", "Other"];
-let swatchHTML = Swatches(d3.scaleOrdinal(categories, colors));
-
-d3.select("#WNBA-donuts")
-    .append("div")
-    .node().innerHTML = swatchHTML;
 
 //Define createRingsWNBA function
 function createRingsWNBA({ category, values }) {
@@ -43,7 +36,7 @@ function createRingsWNBA({ category, values }) {
 
     const arcLabel = d3.arc().innerRadius(labelRadius).outerRadius(labelRadius);
 
-    const svg = d3.select("#WBNA-donuts")
+    const svg = d3.select("#WNBA-donuts")
         .append("svg")
         .attr("width", width)
         .attr("height", height)
