@@ -1,21 +1,21 @@
 league,party,party_int,amount
 NFL,Republican,5,3299600
-MLB,Democrat,1,1727624
 WNBA,Republican,5,902350
 NBA,Republican,5,339700
+NHL,Republican,5,255800
+MLB,Republican,5,32500
+NBA,Bipartisan - mostly Republican,4,22500
+WNBA,Bipartisan - mostly Republican,4,20000
+NFL,Bipartisan - mostly Republican,4,7500
+NFL,Bipartisan,3,215000
+NHL,Bipartisan,3,27000
+NBA,Bipartisan,3,22000
+MLB,Bipartisan,3,10000
+WNBA,Bipartisan,3,3750
+MLB,Democrat,1,1727624
 NFL,Democrat,1,324190
 NBA,Democrat,1,285548
-NHL,Republican,5,255800
-NFL,Bipartisan,3,215000
 NHL,Democrat,1,131600
 WNBA,Democrat,1,78120
-MLB,Republican,5,32500
-NHL,Bipartisan,3,27000
-NBA,Bipartisan - mostly Republican,4,22500
-NBA,Bipartisan,22000
 NFL,NA,7,20000
-WNBA,Bipartisan - mostly Republican,4,20000
-MLB,Bipartisan,3,10000
-NFL,Bipartisan - mostly Republican,4,7500
-WNBA, Bipartisan,3,3750
 MLB,NA,7,2700
