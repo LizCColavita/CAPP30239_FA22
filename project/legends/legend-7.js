@@ -1,6 +1,6 @@
 var svg = d3.select("#legend-7")
       .append("svg")
-      .attr("viewBox", [0, 0, 400, 10]);
+      .attr("viewBox", [0, 0, 300, 10]);
 
     svg.append("circle").attr("cx",5).attr("cy",5).attr("r", 6).style("fill", "#ca0020")
     svg.append("circle").attr("cx",75).attr("cy",5).attr("r", 6).style("fill", "#0571b0")
