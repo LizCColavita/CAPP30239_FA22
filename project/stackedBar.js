@@ -1,7 +1,7 @@
 // Copyright 2021 Observable, Inc.
 // Released under the ISC license.
 // https://observablehq.com/@d3/stacked-horizontal-bar-chart
-function StackedBarChart(data, {
+function StackedBarChart(data, league, {
     x = d => d, // given d in data, returns the (quantitative) x-value
     y = (d, i) => i, // given d in data, returns the (ordinal) y-value
     z = () => 1, // given d in data, returns the (categorical) z-value
@@ -116,20 +116,35 @@ function StackedBarChart(data, {
     svg.append("g")
         .attr("transform", `translate(${xScale(0)},0)`)
         //.call(yAxis);
-    
-    svg.append("text")
-        .attr("font-family", "Source Sans Pro")
-        .attr("x", 590)
-        .attr("y", 58)
-        .attr("fill", "#fff")
-        .text("68%");
 
-    svg.append("text")
-        .attr("font-family", "Source Sans Pro")
-        .attr("x", 850)
-        .attr("y", 58)
-        .attr("fill", "#fff")
-        .text("32%");
+    if (league == "WNBA") {
+            svg.append("text")
+                .attr("font-family", "Source Sans Pro")
+                .attr("x", 590)
+                .attr("y", 58)
+                .attr("fill", "#fff")
+                .text("68%");
+            svg.append("text")
+                .attr("font-family", "Source Sans Pro")
+                .attr("x", 850)
+                .attr("y", 58)
+                .attr("fill", "#fff")
+                .text("32%");
+            }
+    if (league == "NFL") {
+            svg.append("text")
+                .attr("font-family", "Source Sans Pro")
+                .attr("x", 390)
+                .attr("y", 58)
+                .attr("fill", "#fff")
+                .text("42%");
+            svg.append("text")
+                .attr("font-family", "Source Sans Pro")
+                .attr("x", 850)
+                .attr("y", 58)
+                .attr("fill", "#fff")
+                .text("58%");
+            }
   
     return Object.assign(svg.node(), {scales: {color}});
   }

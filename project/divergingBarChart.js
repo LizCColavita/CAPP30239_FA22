@@ -108,7 +108,8 @@ function DivergingBarChart(data, {
         .call(g => g.selectAll(".tick text")
           .filter(y => YX.get(y) < 0)
             .attr("text-anchor", "start")
-            .attr("x", 10));
+            .attr("x", 10))
+            .attr("font-size", 12);
   
     return svg.node();
   }

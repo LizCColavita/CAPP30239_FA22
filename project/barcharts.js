@@ -23,7 +23,7 @@ Promise.all([
         {category: "WNBA Men", party: "Other", amount: 0},
         {category: "All Women", party: "Other",  amount: 0},
         {category: "All Men", party: "Other",  amount: 0}
-];
+        ];
         
 
     for (let d of unseparated){
@@ -116,11 +116,11 @@ Promise.all([
     document.getElementById("grouped-bar").append(groupedBar);
 
     // create array for diverging bar chart
-    let data2 = [{league: "WNBA", average: 15.8, ratio: 17.4},
-        {league: "NBA", average: 15.8, ratio: 15.2},
-        {league: "NFL", average: 15.8, ratio: 46.3},
-        {league: "NHL", average: 15.8, ratio: 5.1},
-        {league: "MLB", average: 15.8, ratio: 5.0},
+    let data2 = [{league: "WNBA", average: 15.8, ratio: 35.2},
+        {league: "NFL", average: 15.8, ratio: 29.3},
+        {league: "NBA", average: 15.8, ratio: 17.2},
+        {league: "NHL", average: 15.8, ratio: 12.9},
+        {league: "MLB", average: 15.8, ratio: 8.2},
         {league: "NASCAR", average: 15.8, ratio: 0.0},
     ]
 
@@ -134,16 +134,18 @@ Promise.all([
         colors: colors2,
         xLabel: "← Below · Percentage Point Deviation from the Average · Above →",
         marginTop: 48,
+        width: 800,
+        marginLeft: 100
     });
 
-    document.getElementById("diverging-bar-NFL").append(divergingBar);
+    // document.getElementById("diverging-bar-NFL").append(divergingBar);
 
     // create array for stacked WNBA horizontal bar chart
     let data3 =[{league: "WNBA", gender: "Men", ratio: 68},
         {league: "WNBA", gender: "Women", ratio: 32}]
     
     // create horizontal stacked bar chart
-    let stackedBar = StackedBarChart(data3, {
+    let stackedBar = StackedBarChart(data3, "WNBA", {
         x: d => d.ratio,
         y: d => d.league,
         z: d => d.gender,
@@ -169,14 +171,36 @@ Promise.all([
                     {league: "NHL", ratio: "owner", value: 13},
                     {league: "NHL", ratio: "donation", value: 5}]
 
-    // create 2nd groupe bar chart
+    // create 2nd grouped bar chart
     let groupedBar2 = GroupedBarChart(data4, {
         x: d => d.league,
         y: d => d.value,
-        z: d => d.ratio
-
+        z: d => d.ratio,
+        colors: colors2,
+        xPadding: 0.25,
+        width: 800,
+        marginLeft: 100,
     })
 
     document.getElementById("women-grouped-bar").append(groupedBar2);
+
+    // create array for second stacked bar chart
+    let data5 = [{league: "NFL", gender: "Men", ratio: 42},
+            {league: "NFL", gender: "Women", ratio: 58}]
+    
+    // create horizontal stacked bar chart
+    let stackedBar2 = StackedBarChart(data5, "NFL", {
+        x: d => d.ratio,
+        y: d => d.league,
+        z: d => d.gender,
+        colors: colors2,
+        width: 900,
+        height: 75,
+        title: d => d.ratio,
+        marginLeft: 100,
+
+    })
+
+    document.getElementById("NFL-bar").append(stackedBar2);
 
   });
