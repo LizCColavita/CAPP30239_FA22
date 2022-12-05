@@ -1,6 +1,12 @@
 # Overview
 
 Project Description:
+This directory contains the files for the final project of University of Chicago's **Data Visualization for Policy Analysis** course (CAPP30239 Autumn 2022). The premise of the project was to find a dataset of interest and use it to craft a story and accompanying data visualizations using Javascript D3 and CSS. My data comes from FiveThirtyEight and is related to the political campaigns contributions of professional sports team owners in the MLB, NBA, WNBA, NHL, NFL, and NASCAR. Largely, donations flow to Republican-affiliated campaigns, regardless of gender of the owner or sports league. However, there are some anomalies. Namely:
+- Women MLB owners and men NBA owners are the most Democratic in their campaign donations
+- WNBA is the only league in which donations to democrat-affiliated campaigns outnumber donations to republican-affiliated campaigns
+- NFL is the only league in which the proportion of women owner’s donations outnumber men owner’s political donations, despite women only making up 29% of owners in the NFL
+
+Explaining these breaks in the patter are a bit harder to explain, though I attempt to fill in the gaps with additional research such as the political demographics of the league fanbase (MLB), social justice activism of the players (WNBA), and the long-time, and still-growing presence of women in the league (NFL).
 
 
 Directories:
