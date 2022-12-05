@@ -9,18 +9,18 @@ Directories:
 - unused: contains sankey.csv and parallet-set.js files which were used to create an alluvial chart but ultimately not used in the final project page
 
 Files:
--index.html: html file for the final project
--styles.css: css for formating the above html page
--index.md: md file to execute the index.html file in GitHub pages
--barcharts.js: code to create the grouped bar charts, horizontal bar chart, and stacked horizontal bar charts in index.html
--WNBA-donuts.js: code to create the donut charts for donation patterns of all, women, and men WNBA owners
--cluster.js: code to create cluster charts for overall men and women owners' donations
--sidebar.js: code to create charts in the "Playing Field" sidebar
--stackedBar.js: code for a stacked bar chart function from https://observablehq.com/@d3/stacked-horizontal-bar-chart
--divergingBarChart.js: code for a diverging bar chart function from https://observablehq.com/@d3/diverging-bar-chart
--groupedBarChart.js: code for grouped bar chart function from https://observablehq.com/@d3/grouped-bar-chart
--horizontalBarChart.js: code for horizontal bar chart function from https://observablehq.com/@d3/horizontal-bar-chart
--treeMap.js:code for treemap function from https://observablehq.com/@d3/treemap
+- index.html: html file for the final project
+- styles.css: css for formating the above html page
+- index.md: md file to execute the index.html file in GitHub pages
+- barcharts.js: code to create the grouped bar charts, horizontal bar chart, and stacked horizontal bar charts in index.html
+- WNBA-donuts.js: code to create the donut charts for donation patterns of all, women, and men WNBA owners
+- cluster.js: code to create cluster charts for overall men and women owners' donations
+- sidebar.js: code to create charts in the "Playing Field" sidebar
+- stackedBar.js: code for a stacked bar chart function from https://observablehq.com/@d3/stacked-horizontal-bar-chart
+- divergingBarChart.js: code for a diverging bar chart function from https://observablehq.com/@d3/diverging-bar-chart
+- groupedBarChart.js: code for grouped bar chart function from https://observablehq.com/@d3/grouped-bar-chart
+- horizontalBarChart.js: code for horizontal bar chart function from https://observablehq.com/@d3/horizontal-bar-chart
+- treeMap.js:code for treemap function from https://observablehq.com/@d3/treemap
 
 
 # Project Step 1: Find Data
