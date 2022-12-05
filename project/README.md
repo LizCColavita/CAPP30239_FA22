@@ -1,3 +1,28 @@
+# Overview
+
+Project Description:
+
+
+Directories:
+- data: contains csv files used to create data arrays/objects in js files
+- legends: contains js files for the legends for the d3 charts
+- unused: contains sankey.csv and parallet-set.js files which were used to create an alluvial chart but ultimately not used in the final project page
+
+Files:
+-index.html: html file for the final project
+-styles.css: css for formating the above html page
+-index.md: md file to execute the index.html file in GitHub pages
+-barcharts.js: code to create the grouped bar charts, horizontal bar chart, and stacked horizontal bar charts in index.html
+-WNBA-donuts.js: code to create the donut charts for donation patterns of all, women, and men WNBA owners
+-cluster.js: code to create cluster charts for overall men and women owners' donations
+-sidebar.js: code to create charts in the "Playing Field" sidebar
+-stackedBar.js: code for a stacked bar chart function from https://observablehq.com/@d3/stacked-horizontal-bar-chart
+-divergingBarChart.js: code for a diverging bar chart function from https://observablehq.com/@d3/diverging-bar-chart
+-groupedBarChart.js: code for grouped bar chart function from https://observablehq.com/@d3/grouped-bar-chart
+-horizontalBarChart.js: code for horizontal bar chart function from https://observablehq.com/@d3/horizontal-bar-chart
+-treeMap.js:code for treemap function from https://observablehq.com/@d3/treemap
+
+
 # Project Step 1: Find Data
 
 ## Data Source
@@ -83,3 +108,26 @@ I **created smaller csv files** based on league. Requirements if the assignment 
 - NFL.csv
 - NHL.csv
 - WNBA.csv
+
+# Project Step 3: Build Charts
+
+Internally, I very much struggled with coming to terms with the fact that my data was not conducive to fancy, complex charts. In an attempt to demonstrate proficiency with more complex d3 charts, I tried to create an alluvial chart (parallel-set.js  with data from sankey.csv). After I got most of the chart done and was going to fine tune the colors and formatting, I realized that the chart was not very clear and not very good supporting the point I wanted to make. I wanted to use the chart to highlight women MLB owners’ and men WNBA owners’ contributions to Democrat-affiliated campaigns, but the alluvial chart very much hid those findings. Largely because the absolute size of women MLB owners and men WNBA owners in dollar amounts was small compared to heavy hitters, like men MLB and men NBA owners.
+
+In a similar vein, because most of the key parts of my story  were related to parts of a whole, I tried to utilize as many chart types as possible that were appropriate for showing this kind of data. Yet, bar charts and donut charts were often the most concise way of emphasizing my key points. I added some variety with the tree map and the bubble chart, as well as single stacked bar charts as occasional substitutes for donut charts.
+
+In the end, I ultimately ended up building the following charts:
+- Grouped Bar Charts
+    - Women MLB Owners and Men WNBA Owners Donate More to Democrat-Affiliated Campaigns (main container)
+    - Proportion of Women Owners Compared to Proportion of Women's Political Contributions by League (main container)
+- Horizontal Bar Chart
+    - Political Donations broken Down by League (sidebar)
+- Stacked Horizontal Bar Charts
+    - Gender Breakdown of WNBA Owners' Political Contributions (main container)
+    - Gender Breakdown of NFL Owners' Political Contributions (main container)
+- Donut Charts
+    - Political Donations broken Down by Gender (sidebar)
+    - Political Contribution Patterns of WNBA Owners (main container)
+- Cluster Charts
+    - Men and Women Owners' Political Donations (main container)
+- Tree Map Chart
+    - Political Donations broken Down by Party (sidebar)
