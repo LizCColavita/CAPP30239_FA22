@@ -10,7 +10,7 @@ function GroupedBarChart(data, {
     marginTop = 30, // top margin, in pixels
     marginRight = 0, // right margin, in pixels
     marginBottom = 30, // bottom margin, in pixels
-    marginLeft = 40, // left margin, in pixels
+    marginLeft = 30, // left margin, in pixels
     width = 640, // outer width, in pixels
     height = 400, // outer height, in pixels
     xDomain, // array of x-values
@@ -82,7 +82,7 @@ function GroupedBarChart(data, {
       .selectAll("rect")
       .data(I)
       .join("rect")
-        .attr("x", i => xScale(X[i]) + xzScale(Z[i]) - 6)
+        .attr("x", i => xScale(X[i]) + xzScale(Z[i]))
         .attr("y", i => yScale(Y[i]))
         .attr("width", xzScale.bandwidth())
         .attr("height", i => yScale(0) - yScale(Y[i]))
@@ -92,18 +92,19 @@ function GroupedBarChart(data, {
       .selectAll("text")
       .data(I)
       .join("text")
-        .attr("x", i => xScale(X[i]) + xzScale(Z[i]) - 3)
+        .attr("x", i => xScale(X[i]) + xzScale(Z[i]) + 15)
         .attr("y", i => yScale(Y[i]) - 8)
         .text(i => (Y[i]).toFixed() + "%")
         .attr("height", i => yScale(Y[i]) + 10)
-        .attr("font-size", 10);
+        .attr("font-size", 14);
   
     if (title) bar.append("title")
         .text(title);
 
     svg.append("g")
         .attr("transform", `translate(0,${height - marginBottom})`)
-        .call(xAxis);
+        .call(xAxis)
+        .attr("font-size", 12);
   
     return Object.assign(svg.node(), {scales: {color: zScale}});
   }

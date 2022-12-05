@@ -76,7 +76,9 @@ Promise.all([
                     data[9].amount += d.Amount;
                 } } 
     }};
+
     console.log(data)
+
     // change format of amount values - put into percents
     for (let d of data){
         if (d.category == "All Men"){
@@ -102,13 +104,13 @@ Promise.all([
         x: d => d.category,
         y: d => d.amount,
         z: d => d.party,
+        marginLeft: 100,
         zDomain: parties,
         xDomain: groups,
-        yLabel: "% of Total Campaign Donations per Group",
         xLabel: "Group of Owners",
         colors: colors,
         xPadding: 0.25,
-        width: 550
+        width: 800,
         });
 
     document.getElementById("grouped-bar").append(groupedBar);
@@ -154,5 +156,27 @@ Promise.all([
     })
 
     document.getElementById("WNBA-bar").append(stackedBar);
+
+    // create array for 2nd grouped bar chart
+    let data4 = [{league: "WNBA", ratio: "owner", value: 35},
+                    {league: "WNBA", ratio: "donation", value: 32},
+                    {league: "NBA", ratio: "owner", value: 17},
+                    {league: "NBA", ratio: "donation", value: 6},
+                    {league: "MLB", ratio: "owner", value: 8},
+                    {league: "MLB", ratio: "donation", value: 8},
+                    {league: "NFL", ratio: "owner", value: 29},
+                    {league: "NFL", ratio: "donation", value: 58},
+                    {league: "NHL", ratio: "owner", value: 13},
+                    {league: "NHL", ratio: "donation", value: 5}]
+
+    // create 2nd groupe bar chart
+    let groupedBar2 = GroupedBarChart(data4, {
+        x: d => d.league,
+        y: d => d.value,
+        z: d => d.ratio
+
+    })
+
+    document.getElementById("women-grouped-bar").append(groupedBar2);
 
   });

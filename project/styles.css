@@ -11,7 +11,9 @@ svg {
     color:#404040;
     position: flex;
     margin-top: 10px;
-    padding: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 10px;
     flex: 1;
     overflow: auto;
 }
@@ -23,13 +25,13 @@ svg {
 .sidebar {
     height: 1400px;
     width: 25%;
-    position: float;
+    position: sticky;
     top: 10;
     left: 10;
     background-color: #ededed;
     color: #404040;
     border-radius: 10px;
-    }
+}
 
 .sidebar p {
     font-family: 'Source Sans Pro';
@@ -57,7 +59,7 @@ svg {
 }
 
 .sidebar h4 {
-    font-size: 18px
+    font-size: 18px;
 }
 
 .svg-tooltip {
@@ -75,4 +77,8 @@ svg {
     text-overflow: ellipsis;
     z-index: 300;
     visibility: hidden;
+  }
+
+  .container h1 {
+    font-size: 40px;
   }

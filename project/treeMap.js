@@ -81,8 +81,8 @@ function Treemap(data, { // data is either tabular (array of objects) or hierarc
         .attr("width", width)
         .attr("height", height)
         .attr("style", "max-width: 100%; height: auto; height: intrinsic;")
-        .attr("font-family", "sans-serif")
-        .attr("font-size", 10);
+        .attr("font-family", "Source Sans Pro")
+        .attr("font-size", 28);
     
 
     const node = svg.selectAll("a")

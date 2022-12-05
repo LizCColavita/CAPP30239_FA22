@@ -16,12 +16,14 @@
     <main>
     <div class = "container">
         <h1>A Numbers Game</h1>
+        <h4>Liz Colavita</h4>
+        <h4>Data Source: <a href="https://github.com/fivethirtyeight/data/tree/master/sports-political-donations">FiveThirtyEight</a></h4>
         <p>
             Women are making headlines in sports at both national and international levels, from professional leagues to collegiate athletics. 
             Just this week, Julianne Sitch, head coach of the University of Chicago men's soccer team, is the 
-            <a href="https://news.uchicago.edu/story/soccer-coach-makes-history-she-leads-mens-team-ncaa-final-four?utm_source=newsletter_CTA&utm_medium=email&utm_campaign=UChicago_News_M11_29_2022&mkt_tok=MjUwLUNRSC05MzYAAAGIY9gmIDfOtWiv4XSolUA6kWvv64TfhhIqrNyTDgmN8ZShai0osW0_n-i-YmepgcDVOqPsYo8xvrgqtJNJz9fR-UuSSvVS02B-aGCMaECmlgXm">first woman to lead a men's soccer 
-            team to the NCAA final four</a> - in her first year in the position no less.  On the world stage, Stéphanie Frappart will lead the 
-            <a href="https://www.nytimes.com/2022/12/01/sports/soccer/world-cup-women-referee-crew.html"> first all-woman referee team at a World Cup.</a>
+            <a href="https://news.uchicago.edu/story/uchicago-mens-soccer-team-wins-ncaa-division-iii-championship">first woman to lead a men's soccer 
+            team to the NCAA championship title</a> - the program's first title ever and all within her first year in the position no less.  On the world stage, Stéphanie Frappart will lead the 
+            <a href="https://www.nytimes.com/2022/12/01/sports/soccer/world-cup-women-referee-crew.html"> first all-women referee team at a World Cup.</a>
         </p>
         <p>
             And we best not forget that professional sports are big businesses. From the field to the boardroom, women are making moves. 
@@ -43,31 +45,27 @@
             Republican-affiliated campaigns, and donations have dropped off in the four years between the 2016 and 2020 presidential 
             elections. These trends hold across league and across the gender of the owner, with a few exceptions.
         </p>
-
         <p>
             Hidden within these averages and aggregations are some anomalies in the <b>MLB, WNBA, and NFL</b>.
-        </p>
-
-        
-        <div class = "flex-container">
+        </p>  
+        <div>
             <h2>Women MLB Owners and Men WNBA Owners Donate More to Democrat-Affiliated Campaigns</h2>
-            <div id="grouped-bar" class="flex-item"></div>
-
-            <div class="flex-item">
+            <div id="grouped-bar"></div>
+            <div>
                 <p>
                     Owners of MLB teams comprise over 46% of political campaigns donations at $21.68 million. This is nearly double the political
                     contributions of the runner-up league in terms of donations, which is the NBA at $12.03 million. In comparison with the 
                     five other sports leagues in this dataset, the sheer size of MLB owner's political donations is of particular interest.
                 </p>
                 <p>
-                    Yet, a deeper dive reveals a complete diveregence from the normal donating patterns across most leagues, even when 
+                    Yet, a deeper dive reveals a complete divergence from the normal donating patterns across most leagues, even when 
                     accounting for the gender of the team owner. <b>Of Women MLB owners' political donations, 97% went to Democrat-affiliated campaigns.</b>
                     This is in contrast with all women owners across leagues wherein 32% of donations went to Democratic campaigns. The difference 
                     becomes even more stark when looking at all men owners' donations, of which 20% of donations went to Democratic coffers.
                 </p>
                 <p>
                     Though MLB team owners overall account for a significant portion of sports owners' political contributions, women owners 
-                    only account for 8.2% of donations in the league. Moreover, if one were to break down donations by league and gender of the owner into 11 categories 
+                    only account for 8% of donations in the league. Moreover, if one were to break down donations by league and gender of the owner into 11 categories 
                     (two genders across six leagues, with the the exception of NASCAR which has no women owners), women MLB owners come in 7th totaling 
                     $1.77 million in campaign donations. Unsurprisingly, their men counterparts rank first at $19.9 million.
                 </p>
@@ -92,40 +90,54 @@
                     Overall, fans are not incredibly left-leaning, despite perhaps a growing schism in the fanbase. The commissioner has publicly supported voting access and 
                     a participatory democracy. This all does very little to explain the overwhelming propensity for women owners to donate to 
                     Democrat-affiliated political campaigns.
-                </p>
-         
+                </p>   
                 <p>
                     Perhaps intuitively, the WNBA is the only league in which donations to Democratic campaigns outpace donations to Republican campaigns. 
-                    52% of WNBA owners donations went to Democrat-affiliated campaigns. For comparison, 22.8% of donations across leagues when to Democratic 
+                    52% of WNBA owners donations went to Democrat-affiliated campaigns. For comparison, 22.8% of donations across leagues went to Democratic 
                     recipients. Interestingly, it was <b>men owners in the WNBA driving the leftward lean of the league's political donations</b>. 
                 </p>
 
             </div>
-            <h4> Donation Patterns of WNBA Owners</h4>
+            <h3> Political Contribution Patterns of WNBA Owners</h3>
             <div id="legend-2"></div>
-            <div id="WNBA-donuts" class="flex-item"></div>
+            <div id="WNBA-donuts"></div>
 
-            <h4> Gender Breakdown of WNBA Owners</h4>
+            <h3> Gender Breakdown of WNBA Owners' Political Contributions</h3>
             <div id="legend-3"></div>
-            <div id="WNBA-bar" class="flex-item"></div>
-            <div class="flex-item">
+            <div id="WNBA-bar"></div>
+            <div>
                 <p>
                     Dissecting the WNBA numbers by gender, men owners' contributions comprise 68% of all donations from WNBA owners, and 72% of their political dollars went to Democratic campaigns. 
                     Of the 32% of WNBA donations that were made by women owners, nearly 90% went to Republican campaigns - the highest percentage of women owners' contributions to 
                     Republican campaigns across leagues that have women owners.
                 </p>
-
+                <p>
+                    The bubble charts below summarize the donation patterns of men and women owners. The bubble represent the total donations to 
+                    a particular party affiliation in each league, whereby size represents the donation amount and color represents the party affiliation of 
+                    the donations. For example, the largest bubble in the first chart represents men MLB owners' donations to Republican-affiliated campaigns.
+                </p>
+                <p>
+                    Looking at men's donation patterns, the three largest donation amounts are MLB, NBA, and NHL owners' contributions to Republican affiliated
+                    campaigns. Rounding out the top five are MLB and NBA donations to Democrat-affiliated campaigns.
+                </p>
             </div>
-
+            <h3>Donation Patterns of Men and Women Owners</h3>
+            <div id="legend-4"></div>
             <div id="cluster"></div>
-
+            <div>
+                <p>
+                    Women's donations are overall much smaller than men's, but it is notable that women MLB owners' political contributions to
+                    Democrat-affiliated campaigns represent the second-largest category of women's donations. And though women owners' donations are 
+                    considerably smaller than men's in absolute value, in aggregation their ratio as owners is on par with their ratio of donated campaign dollars,
+                    hovering at approximately 16% (25 women out of 158 owners) and 15% ($6.9 million out of $47 million), respectively.
+                </p>
+            </div>
         </div>
 
-        
         <!-- <div id="parallel-set"></div> -->
 
         <div>
-            <h2>Nearly Half of all NFL Owners are Women</h2>
+            <h2>Women Account for 58% of all NFL Political Contributions...but are only 30% of Owners</h2>
             <p>
                 Arguably, the NFL is the most visible example of women joining the playing field. In 2021, Sarah Thomas garnered attention 
                 as the <a href="https://www.vogue.com/article/sarah-thomas-first-woman-to-referee-the-super-bowl">first woman referee to work a Super Bowl game</a>, 
@@ -135,24 +147,17 @@
             <p>
                 Of the owners included in FiveThirtyEight's dataset, nearly 16%, or 1 in 6 owners, are women. Encouragingly, 
                 the proportion of women owners is proportional to their political campaign donations, that is women owners account for 
-                just over 17% of political campaign donation in the dataset.
+                just over 17% of political campaign donation in the dataset in aggregate. Breaking down these figures by league, however, 
+                we see that women owners in the NFL are relatively big political spenders. They make up 30% of owners in the NFL, yet they account for 
+                nearly double that figure in terms of NFL political donations.
             </p>
-
+            <div id = "women-grouped-bar"></div>
             <p>
-                However, there are large disparities across leagues. Notably, women owners in the NFL are skewing the aggregate proportion 
-                of women sports team owners. Women account for 46% of owners in the NFL. The WNBA is the league with the second-highest 
-                proportion of women owners with over 17%. On the other end of the spectrum are the MLB with nearly 5% women owners, and 
-                NASCAR with no women owners.
+                Moreover, women owners in the  WNBA and NFL are skewing the aggregate proportion of women sports team owners. Women account 
+                for 35% of owners in the WNBA and 29% in the NFL. On the other end of the spectrum are the NHL and NBA with 13%  and 8% women owners, respectively. 
             </p>
-            <div class = "percents">
-                <h6 style = "font-family: 'Crimson Text'; font-size: 48px">46% <p> of owners in the NFL are women</p> </h6>
-                <h6 style = "font-family: 'Crimson Text'; font-size: 48px">17% <p> of owners in the WNBA are women</p> </h6>
-            </div>
-
             <div id="diverging-bar-NFL"></div>
-            <p> Data Source: <a href="https://github.com/fivethirtyeight/data/tree/master/sports-political-donations"> FiveThirtyEight</a> </p>
-            
-
+    
         </div>
 
         <div> 
@@ -180,7 +185,7 @@
             <div id="party-sidebar"></div>
 
             <h4>Breakdown By Gender</h4>
-            <p> Proportion of campaign donations made by women owners is on par with the ratio of women owners.</p>
+            <p></p>
             <div id="gender-donut-sidebar"></div>
 
         </div>
@@ -197,6 +202,7 @@
     <script src="WNBA-donuts.js"></script>
     <script src="legend-3.js"></script>
     <script src="stackedBar.js"></script>
+    <script src="legend-4.js"></script>
     <script src="cluster.js"></script>
     <script src="barcharts.js"></script>
     <script src="divergingBarChart.js"></script>

@@ -10,8 +10,8 @@ Promise.all([
 
     // create array for overall gender data
     let genderData = [
-        {category: "Number of Owners", values: [{gender: "Female", amount: 25}, {gender: "Male", amount: 133}]},
-        {category: "Donations", values: [{gender: "Female", amount: 6.9}, {gender: "Male", amount: 40.1}]}
+        {category: "Number of Owners", values: [{gender: "Women", amount: 25}, {gender: "Men", amount: 133}]},
+        {category: "Donations ($ mil)", values: [{gender: "Women", amount: 6.9}, {gender: "Men", amount: 40.1}]}
     ];
   
 
@@ -66,12 +66,12 @@ Promise.all([
         path: d => d.name.replace(/\./g, "/"), // e.g., "flare/animate/Easing"
         value: d => d?.size,
         group: d => d.name.split(".")[1],
-        //label: (d, n) => `${d.name.split(".")[1]}\n${"$" + n.value.toLocaleString("en") + " mil"}`,
+        label: (d, n) => `${" $" + n.value.toLocaleString("en") + " mil"}`,
         title: (d, n) => `${d.name.split(".")[1]}\n${"$" + n.value.toLocaleString("en") + " mil"}`, // text to show on hover
         tile: d3.treemapBinary,
         colors: colors3,
         fillOpacity: 1,
-
+        marginLeft: -50,
     })
 
 
@@ -101,9 +101,9 @@ Promise.all([
 function createRing({ category, values }) {
     const height = 225,
       width = 200,
-      innerRadius = 50,
-      outerRadius = 90,
-      labelRadius = 100;
+      innerRadius = 45,
+      outerRadius = 95,
+      labelRadius = 118;
   
     const arcs = d3.pie()
         .startAngle(-90 * (Math.PI / 180))
@@ -152,11 +152,13 @@ function createRing({ category, values }) {
       .text(d => d);
   
     svg.append("text")
-      .attr("font-size", 16)
-      .attr("font-weight", "bold")
+      .attr("font-weight", "bold")     
       .attr("text-anchor", "middle")
       .attr("alignment-baseline", "center")
-      .style("font-size", 20);
+      .attr("y", 25)
+      .text(category)
+      .style("font-size", 14);
+    
 }
 
 

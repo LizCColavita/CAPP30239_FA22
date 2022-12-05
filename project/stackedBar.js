@@ -116,6 +116,20 @@ function StackedBarChart(data, {
     svg.append("g")
         .attr("transform", `translate(${xScale(0)},0)`)
         //.call(yAxis);
+    
+    svg.append("text")
+        .attr("font-family", "Source Sans Pro")
+        .attr("x", 590)
+        .attr("y", 58)
+        .attr("fill", "#fff")
+        .text("68%");
+
+    svg.append("text")
+        .attr("font-family", "Source Sans Pro")
+        .attr("x", 850)
+        .attr("y", 58)
+        .attr("fill", "#fff")
+        .text("32%");
   
     return Object.assign(svg.node(), {scales: {color}});
   }

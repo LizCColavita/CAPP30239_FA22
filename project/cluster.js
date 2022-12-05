@@ -1,28 +1,31 @@
 
 let width = 1000,
-height = 500;
+    height = 400
+    gWidth = width/2;
 
 Promise.all([
     d3.csv("data/cluster-men.csv"),
     d3.csv("data/cluster-women.csv")
-    ]).then(([clusterMen, clusterWomen]) => {
+    ]).then(([Men, Women]) => {
 
-    let datasets = [clusterMen, clusterWomen];
+    let datasets = [{category: "Men Owners", values: Men}, {category: "Women Owners", values: Women}]
 
-    for (let set of datasets){
-        createCluster(set);
+
+    for (let set of datasets) {
+        data = set.values
+        string = set.category
+        createCluster(data,string);
     };
-
 
 });
 
-function createCluster(data) {
+function createCluster(data, string) {
 
     let svg = d3.select("#cluster")
-    .append("svg")
-    .attr("width", width)
-    .attr("height", height)
-    .attr("viewBox", [0, 0, width, height]);
+        .append("svg")
+        .attr("width", gWidth)
+        .attr("height", height)
+        .attr("viewBox", [0, 0, width/1.3, height]);
 
  
     for (let d of data){
@@ -48,8 +51,8 @@ function createCluster(data) {
 
     let simulation = d3.forceSimulation(data)
         .force("charge", d3.forceManyBody().strength(1000)) //strength
-        .force('x', d3.forceX().x())
-        // .force('y', d3.forceY().y(height/2))
+        //.force('x', d3.forceX().x())
+        //.force('y', d3.forceY().y(height/2))
         .force("center", d3.forceCenter().x(width / 2).y(height / 2))
         .force("collision", d3.forceCollide().radius(d => rScale(d.amount) + 1.5));
 
@@ -86,13 +89,23 @@ function createCluster(data) {
         })
     })
 
+    svg.append("text")
+        .text(string)
+        .attr("x",gWidth * (0.5) - 80)
+        .attr("y", 90)
+        .attr("text-anchor","middle")
+        .style("text-transform","capitalize")
+        .style("font-weight","bold")
+        .attr("font-size", 24);
+
     for (let i = 0; i < 200; i++) {
         simulation.tick()
     }
 
 
     const tooltip = d3.select("body").append("div")
-    .attr("class", "svg-tooltip")
-    .style("position", "absolute")
-    .style("visibility", "hidden");
+        .attr("class", "svg-tooltip")
+        .style("position", "absolute")
+        .style("visibility", "hidden");
+        
 }
