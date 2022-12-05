@@ -1,3 +1,5 @@
+/* Creates cluster charts in the main container */
+/* References code from https://github.com/tiffanyfrance/CAPP30239_FA22*/
 
 let width = 1000,
     height = 400
@@ -45,9 +47,6 @@ function createCluster(data, string) {
         .range(['#ca0020', '#ff6880', '#9765ad', '#0571b0', '#fff', '#757C80', '#58befa'])
         .domain(d3.map(data, d => d.party));
 
-    // let x = d3.scaleLinear()
-    //     .domain(d3.extent(data, d => d.party_int))
-    //     .range([0, 8])
 
     let simulation = d3.forceSimulation(data)
         .force("charge", d3.forceManyBody().strength(1000)) //strength

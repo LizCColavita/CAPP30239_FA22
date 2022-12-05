@@ -1,5 +1,7 @@
-/* Creates sidebar charts providing an overview of the political donation landscape */
+/* Creates Sidebar charts providing an overview of the political donation landscape */
+/* References code from https://observablehq.com/@d3/ and https://github.com/tiffanyfrance/CAPP30239_FA22*/
 
+// Load data
 Promise.all([
     d3.csv("data/sports-political-donations-unseparated.csv"),
     d3.csv("data/sports-political-donations-clean.csv")
@@ -8,14 +10,17 @@ Promise.all([
     console.log("Unseparated Raw", unseparated)
     console.log("Clean Raw", clean)
 
-    // create array for overall gender data
+
+    // Create data arrays for all charts
+
+    // create array for gender data
     let genderData = [
         {category: "Number of Owners", values: [{gender: "Women", amount: 25}, {gender: "Men", amount: 133}]},
         {category: "Donations ($ mil)", values: [{gender: "Women", amount: 6.9}, {gender: "Men", amount: 40.1}]}
     ];
   
 
-    // create array for overall league data
+    // create array for league data
     let leagueData = [
         {league: "WNBA", amount: 0},
         {league: "NBA", amount: 0},
@@ -53,7 +58,9 @@ Promise.all([
         {name: "party.Bipartisan-Independent", size: 1.8},
         {name: "party.Democrat", size: 10.1}];
 
-        
+
+    // Build Charts
+
     // create donut charts
     for (let d of genderData) {
         createRing(d);
@@ -97,6 +104,7 @@ Promise.all([
 
 });
 
+// function for donut charts
 
 function createRing({ category, values }) {
     const height = 225,

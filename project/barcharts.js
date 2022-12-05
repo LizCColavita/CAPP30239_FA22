@@ -1,5 +1,7 @@
-/* Creates charts in the main container */
+/* Creates bar charts in the main container */
+/* References code from https://observablehq.com/@d3/ and https://github.com/tiffanyfrance/CAPP30239_FA22 */
 
+//load data
 Promise.all([
     d3.csv("data/sports-political-donations-unseparated.csv"),
     d3.csv("data/sports-political-donations-clean.csv")
@@ -8,8 +10,8 @@ Promise.all([
     console.log("Unseparated Raw", unseparated)
     console.log("Clean Raw", clean)
 
-    //create necessary array
-
+/* First Grouped Bar Chart ("grouped-bar") */
+    //create array for first grouped bar chart ("grouped-bar")
     let data = [
         {category: "MLB Women", party: "Republican",  amount: 0},
         {category: "WNBA Men", party: "Republican", amount: 0},
@@ -25,7 +27,7 @@ Promise.all([
         {category: "All Men", party: "Other",  amount: 0}
         ];
         
-
+    // fill array with data/calculations for first grouped bar chart ("grouped-bar")
     for (let d of unseparated){
         d.Amount = +d.Amount
         party = d.Party
@@ -99,7 +101,7 @@ Promise.all([
     let colors = ['#ca0020','#0571b0', '#c2a5cf'];
     let groups = ["MLB Women", "WNBA Men", "All Women", "All Men"];
 
-    // create grouped bar chart
+    // create first grouped bar chart ("grouped-bar")
     let groupedBar = GroupedBarChart(data, {
         x: d => d.category,
         y: d => d.amount,
@@ -112,8 +114,13 @@ Promise.all([
         xPadding: 0.25,
         width: 800,
         });
-
+    
     document.getElementById("grouped-bar").append(groupedBar);
+
+    /* Diverging Bar Chart - ended up not using */
+    
+    /* I tried deleting the code below for the diverging bar chart and removing code from index.html as well but it messed several other charts. I couldn't diagnose the problem before submitting and 
+    recognize this is not good code practice */
 
     // create array for diverging bar chart
     let data2 = [{league: "WNBA", average: 15.8, ratio: 35.2},
@@ -140,6 +147,9 @@ Promise.all([
 
     // document.getElementById("diverging-bar-NFL").append(divergingBar);
 
+
+    /* Stacked Bar chart ("WNBA-bar") */
+
     // create array for stacked WNBA horizontal bar chart
     let data3 =[{league: "WNBA", gender: "Men", ratio: 68},
         {league: "WNBA", gender: "Women", ratio: 32}]
@@ -158,6 +168,9 @@ Promise.all([
     })
 
     document.getElementById("WNBA-bar").append(stackedBar);
+
+
+    /* Second Grouped Bar Chart ("women-grouped-bar") */
 
     // create array for 2nd grouped bar chart
     let data4 = [{league: "WNBA", ratio: "owner", value: 35},
@@ -183,6 +196,9 @@ Promise.all([
     })
 
     document.getElementById("women-grouped-bar").append(groupedBar2);
+
+
+    /* Stacked Bar Chart ("NFL-bar") */
 
     // create array for second stacked bar chart
     let data5 = [{league: "NFL", gender: "Men", ratio: 42},

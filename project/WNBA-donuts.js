@@ -1,4 +1,5 @@
-// Charts for WNBA Donations Section
+/* Donut Charts for WNBA Donations Section */
+/* References code from https://github.com/tiffanyfrance/CAPP30239_FA22*/
 
 // Create array for WNBA data
 let WNBA = [

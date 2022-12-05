@@ -117,6 +117,7 @@ function StackedBarChart(data, league, {
         .attr("transform", `translate(${xScale(0)},0)`)
         //.call(yAxis);
 
+    // added code for appending labels to stacked bars depending which chart is called
     if (league == "WNBA") {
             svg.append("text")
                 .attr("font-family", "Source Sans Pro")
