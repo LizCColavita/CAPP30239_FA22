@@ -1,4 +1,4 @@
-var svg = d3.select("#legend-2")
+var svg = d3.select("#legend-7")
     .append("svg")
     .attr("viewBox", [0, 0, 400, 5]);
 
